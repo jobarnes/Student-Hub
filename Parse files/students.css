@@ -5,6 +5,10 @@ bright blue:...#1F66AD
 */
 
 /* @group Base */ /* =============================================================== BASE*/
+#g-header  {
+    box-sizing: content-box !important;
+    -moz-box-sizing: content-box !important;
+} 
 body {
     line-height: 1.4;
     font-family: 'Roboto', 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -56,6 +60,13 @@ body.content h1 {
 main.backdrop {
     background-color: #fff;
 }
+.nav-backdrop {
+	background-color: #353736;
+}
+	.nav-backdrop a {
+		color: #fff;
+	}
+nav .explore
 main .content {
     padding: 0 15px;
 }

@@ -40,12 +40,7 @@
     <link href="//brand.unimelb.edu.au/global-header/css/style.css" rel="stylesheet" >
 <!-- /GLOBAL RESOURCES -->
 
-<!-- FRAMEWORK 
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-  <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700" rel="stylesheet" type="text/css">
-  /FRAMEWORK -->
-  
+ 
     <MySource_AREA id_name="head" design_area="head" />
     <MySource_AREA id_name="head_fw" design_area="nest_content" cache="1"><MySource_SET name="type_codes" value="page" /></MySource_AREA>
 
@@ -119,26 +114,9 @@
     
 <div class="backdrop blue">
     <nav class="container" role="navigation">
-        <!-- Toggle button for menu, you can place it anywhere -->
-        <div class="menu-toggle-button" data-menu-id="main-nav"><i class="fa fa-bars"></i> Menu</div>
-
-
-<!-- Menu Structure -->
-  <MySource_AREA id_name="top_nav" design_area="menu_normal"><!-- level 1 -->
-  <MySource_SET name="show_subs" value="always" />
-  <MySource_SET name="level" value="top" />
-  <MySource_SET name="settings.class.normal" value="has-submenu" />
-  <MySource_SET name="settings.class.current" value="has-submenu" />
-  <MySource_SET name="settings.class.hierarchy" value="hierarchy" />
-      
-   <ul class="menu-list list-inline" id="main-nav" role="navigation">
-        <MySource_ASSET>
-           <li class="<MySource_PRINT var="settings.class" />"><a href="<MySource_PRINT var='asset_link' />"> <MySource_PRINT var="asset_short_name" /></a></li>
-         </MySource_ASSET>
-      </ul>
-  </div>
-  </MySource_AREA>
-</nav>
+		<MySource_AREA id_name="main_nav" design_area="nest_content" cache="1"><MySource_SET name="type_codes" value="page" />
+		</MySource_AREA>
+	</nav>
 <!-- /backdrop -->
 
 <MySource_AREA id_name="welcome" design_area="nest_content" cache="1"><MySource_SET name="type_codes" value="page" /></MySource_AREA>
