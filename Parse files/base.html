@@ -1,0 +1,220 @@
+<!-- EASY EDIT -->
+<MySource_AREA id_name="exit_area" design_area="exit" print="no"></MySource_AREA>
+<MySource_AREA id_name="nested_EES_code" design_area="nest_content" print="no" />
+<MySource_AREA id_name="simple_edit_EES" design_area="show_if">
+<MySource_SET name="condition" value="simple_edit_mode" />    
+<MySource_THEN>    
+<!DOCTYPE html>
+        <html lang="en">
+            <head>
+                <meta charset="utf-8" />                
+                <!-- EES install and implementation help: http://manuals.matrix.squizsuite.net/ees/chapters/installation -->                
+                <!-- The title tag is dynamically replaced by EES code, see your EES config.js file to customise -->
+                <!-- Related install step: http://manuals.matrix.squizsuite.net/ees/chapters/installation/#Constructing-the-Configuration-File -->
+                <title>Loading Easy Edit Suite...</title>                
+                <!-- Use a nested standard page (set to raw html) for custom CSS and JS file references. Avoids editing design file. -->
+                <MySource_PRINT id_name="nested_EES_code" />                
+            </head>
+            <body></body>
+        </html>        
+        <MySource_PRINT id_name="exit_area" />        
+    </MySource_THEN>
+</MySource_AREA>
+<!-- / EASY EDIT -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title><MySource_PRINT id_name="__global__" var="asset_name" /> : <MySource_PRINT id_name="__global__" var="site_name" /></title> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<!--
+  Page Maintained by: %asset_metadata_UM.Maintainer.Name%, %asset_metadata_UM.Maintainer.Department%
+  Content Authorised by: %asset_metadata_UM.Authoriser.Title%, %asset_metadata_UM.Organisational.Unit%
+  Asset ID: %globals_asset_assetid%
+-->
+    <MySource_AREA id_name="metadata" design_area="metadata"/>
+    
+<!-- GLOBAL RESOURCES -->
+    <script src="//brand.unimelb.edu.au/global-header/js/injection.js"></script>
+    <link href="//brand.unimelb.edu.au/global-header/css/style.css" rel="stylesheet" >
+<!-- /GLOBAL RESOURCES -->
+
+<!-- FRAMEWORK 
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700" rel="stylesheet" type="text/css">
+  /FRAMEWORK -->
+  
+    <MySource_AREA id_name="head" design_area="head" />
+    <MySource_AREA id_name="head_fw" design_area="nest_content" cache="1"><MySource_SET name="type_codes" value="page" /></MySource_AREA>
+
+<!-- SITE-SPECIFIC RESOURCES -->
+    <MySource_AREA id_name="bootstrap_css" design_area="linked_css" print="yes">
+        <MySource_SET name="tag_type" value="link_tag" />
+        <MySource_SET name="media" value="all" />
+    </MySource_AREA>
+    <MySource_AREA id_name="custom_css" design_area="linked_css" print="no">
+        <MySource_SET name="tag_type" value="link_tag" />
+        <MySource_SET name="media" value="all" />
+    </MySource_AREA>
+    
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="http://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+
+<!--[if IE]>
+   <MySource_AREA id_name="ie_css_all" design_area="linked_css" print="yes">
+       <MySource_SET name="tag_type" value="link_tag" />
+       <MySource_SET name="media" value="all" />
+   </MySource_AREA>
+<![endif]-->  
+
+<!--[if lt IE 8]>
+   <MySource_AREA id_name="ie_css" design_area="linked_css" print="yes">
+       <MySource_SET name="tag_type" value="link_tag" />
+       <MySource_SET name="media" value="all" />
+   </MySource_AREA>
+<![endif]-->  
+
+<!-- EXTRAS : additional areas -->
+<MySource_AREA id_name="head_extras" design_area="nest_content" cache="1"><MySource_SET name="type_codes" value="page" /></MySource_AREA>
+
+<MySource_AREA id_name="side_bar_before" design_area="nest_content" cache="1" print="no"><MySource_SET name="type_codes" value="page" /></MySource_AREA>
+
+<MySource_AREA id_name="side_bar_after" design_area="nest_content" cache="1" print="no"><MySource_SET name="type_codes" value="page" /></MySource_AREA>
+   
+<MySource_AREA id_name="template_vars" design_area="declared_vars" print="no">
+    <MySource_DECLARE name="body_class" value="no-logo blue" type="text" description="Classes that are added to the body tag."/>
+</MySource_AREA>
+
+<MySource_AREA id_name="content_vars" design_area="declared_vars" print="no">
+    <MySource_DECLARE name="content_class" value="col-md-12" type="text" description="Classes that are added to the content block."/>
+</MySource_AREA>
+</head>
+
+<body class="<MySource_PRINT id_name='template_vars' var='body_class' /> %globals_asset_assetid%">
+
+    <!-- Google Tag Manager --> 
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-7JB9" 
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> 
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': 
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], 
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); 
+    })(window,document,'script','dataLayer','GTM-7JB9');</script> 
+    <!-- End Google Tag Manager --> 
+
+
+<img src="%globals_asset_metadata_rec.feature.img_asset_url%" class="feat-img" alt="%globals_asset_metadata_rec.feature.img_asset_friendly_name%">
+
+
+<header class="backdrop blue">
+    <div class="branding container">
+        <MySource_AREA id_name="branding_space" design_area="nest_content" cache="1"><MySource_SET name="type_codes" value="page" /></MySource_AREA>
+    </div><!-- /branding -->  
+</header>     
+    
+<div class="backdrop blue">
+    <nav class="container" role="navigation">
+        <!-- Toggle button for menu, you can place it anywhere -->
+        <div class="menu-toggle-button" data-menu-id="main-nav"><i class="fa fa-bars"></i> Menu</div>
+
+
+<!-- Menu Structure -->
+  <MySource_AREA id_name="top_nav" design_area="menu_normal"><!-- level 1 -->
+  <MySource_SET name="show_subs" value="always" />
+  <MySource_SET name="level" value="top" />
+  <MySource_SET name="settings.class.normal" value="has-submenu" />
+  <MySource_SET name="settings.class.current" value="has-submenu" />
+  <MySource_SET name="settings.class.hierarchy" value="hierarchy" />
+      
+   <ul class="menu-list list-inline" id="main-nav" role="navigation">
+        <MySource_ASSET>
+           <li class="<MySource_PRINT var="settings.class" />"><a href="<MySource_PRINT var='asset_link' />"> <MySource_PRINT var="asset_short_name" /></a></li>
+         </MySource_ASSET>
+      </ul>
+  </div>
+  </MySource_AREA>
+</nav>
+<!-- /backdrop -->
+
+<MySource_AREA id_name="welcome" design_area="nest_content" cache="1"><MySource_SET name="type_codes" value="page" /></MySource_AREA>
+
+
+<main class="backdrop" role="main">
+<MySource_AREA id_name="page_lineage" design_area="asset_lineage">
+    <div class="container breadcrumbs" role="navigation">
+    <ol class="row breadcrumb">
+     <li class="home"><a href="<MySource_PRINT id_name='__global__' var='site_link' full_url='true'/>" rel="home"><span class="fa fa-home"></span> <MySource_PRINT id_name="__global__" var="site_name" /></a></li>
+     <MySource_SET name="levels_to_print" value="0" />
+     <MySource_SET name="prefix_with_home_link" value="false" />
+     <MySource_SET name="suffix_with_current_link" value="true" />
+     <MySource_SET name="prefix_with_divider" value="true" />
+     <MySource_SET name="suffix_with_divider" value="false" />
+     <MySource_SET name="show_hidden_links" value="false" />
+     <MySource_DIVIDER></MySource_DIVIDER>
+     <MySource_ASSET>
+     <li><a href="<MySource_PRINT var='asset_link' />"><MySource_PRINT var='asset_short_name' /></a></li>
+     </MySource_ASSET>
+     </ol>
+    </div>
+</MySource_AREA>
+
+    <div class="container main buttleft">
+    <div class="row content">
+    <div class="<MySource_PRINT id_name='content_vars' var='content_class' print='yes' />">
+        <MySource_AREA id_name="auto_heading" design_area="asset_lineage"><h1><MySource_PRINT id_name="__global__" var="asset_name" /></h1></MySource_AREA>
+        <MySource_AREA id_name="body" design_area="body" />
+    </div><!-- /col-12 -->
+    </div><!-- /row -->
+    </div><!-- /container -->    
+<!-- /backdrop -->
+
+
+<footer class="backdrop local" role="contentinfo">
+   <div class="container">
+   <div class="row">
+   <div class="footer-content col-sm-4">
+   <MySource_AREA id_name="footer_content" design_area="nest_content" cache="1"><MySource_SET name="type_codes" value="page" /></MySource_AREA>
+   </div>
+  
+   <div class="meta col-sm-8">
+   <dl class="auth-meta">
+   <span class="col-sm-3">
+       <dt>Maintainer</dt>   
+       <dd class="cf"><a class="email" href="mailto:%asset_metadata_UM.Maintainer.Email%">%asset_metadata_UM.Maintainer.Name% <i class="fa fa-envelope-o"></i></a></dd>
+   </span>
+   <span class="col-sm-3">  
+       <dt>Authoriser</dt>
+       <dd class="cf">%asset_metadata_UM.Authoriser.Title%</dd>
+   </span>
+   </dl>
+
+   
+   <dl class="page-meta">
+   <span class="col-sm-3"> 
+       <dt>Date created</dt>
+       <dd>%asset_created_j% %asset_created_F% %asset_created_Y%</dd>
+   </span> 
+   <span class="col-sm-3"> 
+       <dt>Last modified</dt>
+       <dd>%asset_updated_j% %asset_updated_F% %asset_updated_Y%</dd>
+   </span>
+   </dl>
+   </div><!-- /meta -->
+   </div><!-- /row -->
+   </div><!-- / container -->
+</footer>
+
+
+<MySource_AREA id_name="foot_fw" design_area="nest_content" cache="1"><MySource_SET name="type_codes" value="page" /></MySource_AREA>
+<!-- Google Analytics Block -->
+<!-- end Google Analytics -->
+<!-- Google search block -->
+<!-- / google search -->
+
+</body>
+</html>
