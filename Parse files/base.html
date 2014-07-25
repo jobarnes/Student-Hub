@@ -123,7 +123,9 @@
 <MySource_AREA id_name="welcome" design_area="nest_content" cache="1"><MySource_SET name="type_codes" value="page" /></MySource_AREA>
 
 
-<main class="backdrop bc-backdrop" role="main">
+<main class="main backdrop" role="main">
+
+<div class="backdrop bc-backdrop">
 <MySource_AREA id_name="page_lineage" design_area="asset_lineage">
     <div class="container breadcrumbs" role="navigation">
     <ol class="row breadcrumb">
@@ -138,19 +140,21 @@
      <MySource_ASSET>
      <li><a href="<MySource_PRINT var='asset_link' />"><MySource_PRINT var='asset_short_name' /></a></li>
      </MySource_ASSET>
-     </ol>
-    </div>
+     </ol><!-- /row -->
+    </div><!-- / breadcrumb container -->
 </MySource_AREA>
+</div><!-- /breadcrumb-backdrop -->
 
+<div class="backdrop">
     <div class="container main buttleft">
     <div class="row content">
     <div class="<MySource_PRINT id_name='content_vars' var='content_class' print='yes' />">
         <MySource_AREA id_name="auto_heading" design_area="asset_lineage"><h1><MySource_PRINT id_name="__global__" var="asset_name" /></h1></MySource_AREA>
         <MySource_AREA id_name="body" design_area="body" />
-    </div><!-- /col-12 -->
+    </div><!-- / var content_class -->
     </div><!-- /row -->
     </div><!-- /container -->    
-<!-- /backdrop -->
+</div><!-- / backdrop -->   
 </main>
 
 
