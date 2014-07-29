@@ -75,6 +75,9 @@ main.backdrop {
 .home .index-backdrop {
     background: #F4EFEB;
 }
+.home .grad-block {
+	background: #E5DBD3;
+}
 main .content {
     padding: 0 15px;
 }
@@ -111,16 +114,19 @@ main .content {
     padding: 0;
 }
     ul#main-nav {
-        margin-bottom: 0;
+        margin: 0;
+        border-top: 1px solid #525453;
     }
     ul#main-nav li {
-        width: 100%;
-        padding:  0;
+        width: 49.6%;
+        padding:  0; margin: 0;
         border-bottom: 1px solid #525453;
+        border-right: 1px solid #525453;
     }
     #main-nav a {
         color: #fff;
         display: block;
+        margin: 0;
         padding: 15px 10px;
         text-transform: uppercase;
     }
@@ -268,7 +274,17 @@ img.alignleft {
 
 /* @group Header */ /* ============================================================ Header */
 header {
-    padding-top: 20px;
+/*  padding-top: 20px; */
+}
+header .feat-img {
+	width: 100%;
+}
+.backdrop.blue .branding {
+	position: relative;
+}
+.site-title {
+	position: absolute;
+	top: 500px;
 }
 img.logo {
     left:  0;
@@ -797,7 +813,8 @@ form div.sq-backend-smallprint {
     border-bottom: none;
     color: #fff;
     display: block;
-    font-size: 1.3em;
+    font-size: 24px;
+    font-weight: 400;
     padding: 20px;
     text-align: center;
     text-transform: uppercase;
@@ -850,11 +867,8 @@ form div.sq-backend-smallprint {
 /* @group Boxes */
 .home .box {
     background-color: #fff;
-    min-height: 350px;
-    border-bottom: 10px solid;
 }
 .box {
-    border: 1px solid #ccc;
     padding: 40px;
     margin-bottom: 30px;
 }
@@ -865,7 +879,7 @@ form div.sq-backend-smallprint {
     padding-bottom: 10px;
     text-align: center;
     text-transform: uppercase;
-    border-bottom: 1px solid #666;
+    border-bottom: 1px solid #ccc;
 }
 .box p {
 	line-height: 1.8em;
@@ -876,14 +890,32 @@ form div.sq-backend-smallprint {
 .box p a {
     border-bottom: 1px dotted #ccc;
 }
-.home .explore-box {
-	border-bottom: 10px solid #1292A6;
+.explore .box {
+	border-bottom: 14px solid #1C97A7;
+}
+.admin .box {
+	border-bottom: 14px solid #1474A4;
+}
+.achieve .box {
+	border-bottom: 14px solid #BE4244;
+}
+.get-involved .box {
+	border-bottom: 14px solid #80619A;
+}
+.balance .box {
+	border-bottom: 14px solid #6E9844;
+}
+.future .box {
+	border-bottom: 14px solid #D1AC5C;
 }
 .index-backdrop a .box:hover {
     background-color: #efefef;
 }
 .index-backdrop a:hover {
     text-decoration: none;
+}
+.index-backdrop .row, .grad-block .row {
+	margin:  0 -30px;
 }
 /* @end */
 
@@ -1138,8 +1170,7 @@ a.site-title {
     height:475px;
 }
 ul#main-nav li {
-    border-bottom: none;
-    width: auto;
+    width: 33%;
 }
 .menu-toggle-button {
     display:none;
@@ -1152,7 +1183,7 @@ ul#main-nav li {
 }
 .home .quicklinks a {
 	height: 200px;
-	padding-top: 85px;
+	padding-top: 80px;
 }
 .home .block.news {
 	margin-left: 20px;
@@ -1165,9 +1196,17 @@ ul#main-nav li {
 .home .backdrop.quicklinks {
 	padding-top: 60px;
 }
+.home .box {
+    min-height: 410px;
+}
 }
 
 @media screen and (min-width: 992px){
+ul#main-nav li {
+    border-bottom: 0;
+    border-right: 0;
+    width: auto;
+}
 .link-block > ul > li {
     width:  30%;
     margin-right: 3%;
@@ -1176,7 +1215,7 @@ ul#main-nav li {
     clear: both;
     border: none;
     padding-bottom: 20px;
-    }
+}
 #main-nav a {
     padding: 16px;
 }
