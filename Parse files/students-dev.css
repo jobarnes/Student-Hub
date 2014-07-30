@@ -276,22 +276,23 @@ img.alignleft {
 header {
 /*  padding-top: 20px; */
 }
+header.backdrop {
+	height: 400px;
+	overflow: hidden;
+}
 header .feat-img {
 	width: 100%;
 }
 .backdrop.blue .branding {
 	position: relative;
-}
-.site-title {
-	position: absolute;
-	top: 500px;
+	top: -400px;
 }
 img.logo {
     left:  0;
     top:  0;
 } 
 a.site-title {
-    color: #036;
+    color: #fff;
     display: block;
     font-size: 2em;
     font-weight: 300;
@@ -1202,6 +1203,9 @@ ul#main-nav li {
 }
 
 @media screen and (min-width: 992px){
+ul#main-nav {
+	border-top: none;
+}
 ul#main-nav li {
     border-bottom: 0;
     border-right: 0;
