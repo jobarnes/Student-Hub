@@ -66,7 +66,7 @@ main.backdrop {
 .home .main .bc-backdrop {
     padding:  0;
 }
-.home .backdrop.quicklinks {
+.home .backdrop.local-quicklinks {
     background-color: #D2DCC3;
 }
 .home .news-backdrop {
@@ -277,7 +277,7 @@ header {
 /*  padding-top: 20px; */
 }
 header.backdrop {
-	height: 400px;
+	height: 200px;
 	overflow: hidden;
 }
 header .feat-img {
@@ -285,7 +285,7 @@ header .feat-img {
 }
 .backdrop.blue .branding {
 	position: relative;
-	top: -400px;
+	top: -80px;
 }
 img.logo {
     left:  0;
@@ -297,7 +297,7 @@ a.site-title {
     font-size: 2em;
     font-weight: 300;
     line-height: 1.2em;
-    margin:  0 0 0 140px;
+    margin:  0;
     padding: 20px 0;
     position: relative;
     top: -25px;
@@ -316,6 +316,7 @@ a.site-title:hover {
 /* @group Local footer */ /* ==================================================== Local footer */
 footer.local {
     background-color: #eee;
+    border-top: 1px solid #ccc;
     font-size: 0.90em;
     padding: 40px 0px;
     position: relative;
@@ -575,7 +576,6 @@ a.more-box {
 	border: 1px solid #ccc;
 	display: inline-block;
 	padding: 10px;
-	margin-top: 40px;
 	width: auto;
 }
 }
@@ -653,6 +653,67 @@ main #buttons a.btn-default {
 }
 #buttons .btn-default h2 {
     color: #2885A6;
+}
+/* @end */
+
+/* @group Media */
+main .media {
+    margin: 1em 0;
+}
+.media, .inner {
+    overflow: hidden;
+}
+.media .img, .media .date {
+    float: left;
+    margin-right: 1.5em;
+}
+.media .img img {
+    display: block;
+}
+.media .imgExt {
+    float: right;
+    margin-left: 1.5em;
+}
+.home .media {
+    margin-bottom: 1.5em;
+}
+.home .media .img {
+    width: 250px;
+}
+.home .media h2, .home .events-list h2 {
+    margin-top: 0;
+}
+.media a {
+    border-bottom: 0 none;
+}
+.index .events-list .row {
+    padding: 10px 0;
+}
+.index .media img {
+    width: 250px;
+}
+.media h3 {
+    margin-top: 0;
+}
+.media .date {
+	display: block;
+    background: linear-gradient(to bottom, #606C88 0%, #3F4C6B 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border-radius: 4px 4px 4px 4px;
+    color: #FFFFFF;
+    padding: 10px 15px;
+    text-align: center;
+}
+.media .day {
+    clear: both;
+    display: block;
+    font-size: 24px;
+    line-height: 1em;
+}
+.media .month {
+    text-transform: uppercase;
+}
+.media .year {
+    display: none;
 }
 /* @end */
 
@@ -800,16 +861,16 @@ form div.sq-backend-smallprint {
 
 
 /* @group Quicklinks */
-.quicklinks ul {
+.local-quicklinks ul {
 	padding: 0; margin: 0;
 }
-.home .quicklinks li {
+.home .local-quicklinks li {
     background-image: none;
     float: left;
     padding: 0;
     width: 100%;
 }
-.quicklinks a {
+.local-quicklinks a {
     background-color: #A8B997;
     border-bottom: none;
     color: #fff;
@@ -821,10 +882,10 @@ form div.sq-backend-smallprint {
     text-transform: uppercase;
     width: 100%;
 }
-.quicklinks li.ask a, .quicklinks li.events a {
+.local-quicklinks li.ask a, .local-quicklinks li.events a {
     background-color: #89A575;
 }
-.backdrop.quicklinks a:hover {
+.backdrop.local-quicklinks a:hover {
     background-color: #637F50;
     text-decoration: none;
 }
@@ -872,6 +933,9 @@ form div.sq-backend-smallprint {
 .box {
     padding: 40px;
     margin-bottom: 30px;
+-webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.2);
+-moz-box-shadow:    0px 0px 5px 0px rgba(50, 50, 50, 0.2);
+box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.2);
 }
 .box h2 {
     color: #036;
@@ -891,29 +955,74 @@ form div.sq-backend-smallprint {
 .box p a {
     border-bottom: 1px dotted #ccc;
 }
-.explore .box {
-	border-bottom: 14px solid #1C97A7;
-}
-.admin .box {
-	border-bottom: 14px solid #1474A4;
-}
-.achieve .box {
-	border-bottom: 14px solid #BE4244;
-}
-.get-involved .box {
-	border-bottom: 14px solid #80619A;
-}
-.balance .box {
-	border-bottom: 14px solid #6E9844;
-}
-.future .box {
-	border-bottom: 14px solid #D1AC5C;
-}
 .index-backdrop a .box:hover {
     background-color: #efefef;
 }
 .index-backdrop a:hover {
     text-decoration: none;
+}
+/* @group Explore */
+.explore .box {
+	border-bottom: 14px solid #1C97A7;
+}
+.explore a .box:hover {
+	background-color: #E8F3F4;
+}
+.explore h2 {
+	color: #087F8C;
+}
+/* @end */
+
+/* @group Admin */
+.admin .box {
+	border-bottom: 14px solid #1474A4;
+}
+.admin a .box:hover {
+	background-color: #EAF3F7;
+}
+.admin h2 {
+	color: #04608E;
+}
+/* @end */
+
+/* @group Achieve */
+.achieve .box {
+	border-bottom: 14px solid #BE4244;
+}
+.achieve a .box:hover {
+	background-color: #F9E8E8;
+}
+.achieve h2 {
+	color: #A01C1C;
+}
+/* @end */
+
+.get-involved .box {
+	border-bottom: 14px solid #80619A;
+}
+.get-involved a .box:hover {
+	background-color: #F1EAF7;
+}
+.get-involved h2 {
+	color: #5E3A7C;
+}
+.balance .box {
+	border-bottom: 14px solid #6E9844;
+}
+.balance a .box:hover {
+	background-color: #EAF2E3;
+}
+.balance h2 {
+	color: #456D1C;
+}
+.future .box {
+	border-bottom: 14px solid #D1AC5C;
+}
+.future a .box:hover {
+	background-color: #F4EDDE;
+}
+.future h2 {
+	color: #996E12;
 }
 .index-backdrop .row, .grad-block .row {
 	margin:  0 -30px;
@@ -1115,7 +1224,7 @@ nav.container {
 } 
 a.site-title {
     padding: 0 0 30px;
-    margin-left: 160px;
+    margin-left: 0px; /*160px*/
     margin-top: 30px;
     font-size: 3em;
     font-weight: 100;
@@ -1179,10 +1288,10 @@ ul#main-nav li {
 .home .main .backdrop {
     padding: 40px 0;
 }
-.home .quicklinks li {
+.home .local-quicklinks li {
 	width: 20%;
 }
-.home .quicklinks a {
+.home .local-quicklinks a {
 	height: 200px;
 	padding-top: 80px;
 }
@@ -1194,11 +1303,8 @@ ul#main-nav li {
 	margin-right: 20px;	
 	margin-left: 0;
 }
-.home .backdrop.quicklinks {
+.home .backdrop.local-quicklinks {
 	padding-top: 60px;
-}
-.home .box {
-    min-height: 410px;
 }
 }
 
@@ -1326,6 +1432,9 @@ body .news-summary .jumbotron, .video-frame iframe {
 .home .loginorout {
     right: -15px;
 }
+.home .box {
+    min-height: 410px;
+}
 }
 
 @media screen and (max-width: 1200px) {
@@ -1364,6 +1473,16 @@ body .news-summary .jumbotron {
 }
 #main-nav a {
     padding: 15px 24px;
+}
+header.backdrop {
+	height: 500px;
+}
+.backdrop.blue .branding {
+	position: absolute;
+	top: -200px;
+}
+a.site-title{
+	margin:  0 0 0 140px;
 }
 }
 

@@ -7,10 +7,13 @@
     
 <!-- INSERT METADATA -->
     
-<!-- GLOBAL RESOURCES -->
+<!-- GLOBAL RESOURCES 
     <script src="http://brand.unimelb.edu.au/global-header/js/injection.js"></script>
     <link href="http://brand.unimelb.edu.au/global-header/css/style.css" rel="stylesheet" >
-<!-- /GLOBAL RESOURCES -->
+ /GLOBAL RESOURCES -->
+ 
+<script src="http://uom-templates.s3.amazonaws.com/injection/injection.js"></script>
+<link href="http://uom-templates.s3.amazonaws.com/injection/injection.css" media="all" rel="stylesheet" />
 
 <!-- FRAMEWORK -->
 <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -77,7 +80,7 @@
 <main class="main backdrop" role="main">
 
 <!-- quicklinks block -->  
-<div class="backdrop quicklinks">
+<div class="backdrop local-quicklinks">
     <div class="container frame">
     	<div class="row content">
                 <ul class="inline-list">
@@ -98,32 +101,38 @@
     		<div class="col-md-6">
     			<div class="block events">
     			<h2><a href="">Upcoming events</a></h2>
-    			<a class="event" href="">
+    			<a class="event media" href="">
     				<p class="date">
     					<span class="day">23</span> 
     					<span class="month">Oct</span>
     				</p>
+					<div class="inner">
 					<p class="time">3.00pm-5.00pm</p>
 					<h3>Graduate study expo</h3>
 					<p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dapibus, sapien vitae porttitor vulputate, massa elit eleifend nisi, suscipit aliquet nulla enim in ligula. Quisque eu risus tellus. Praesent libero magna, auctor ac nulla et, mollis porta eros.</p>
+					</div>
     			</a>
-    			<a class="event" href="">
+    			<a class="event media" href="">
 					<p class="date">
 						<span class="day">25</span> 
 						<span class="month">Oct</span>
 					</p> 
+					<div class="inner">
 					<p class="time">2.00pm</p>
 					<h3>The born digital and cultural heritage conference</h3>
 					<p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dapibus, sapien vitae porttitor vulputate, massa elit eleifend nisi, suscipit aliquet nulla enim in ligula. Quisque eu risus tellus. Praesent libero magna, auctor ac nulla et, mollis porta eros.</p>
+					</div>
 				</a>
-    			<a class="event" href="">
+    			<a class="event media" href="">
 					<p class="date">
 						<span class="day">25</span> 
 						<span class="month">Oct</span>
 					</p> 
-					<p class="time">3pm-5pm</p>
+					<div class="inner">
+					<p class="time">3.00pm-5.00pm</p>
 					<h3>Lorum ipsum dolor sit amet</h3>
 					<p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dapibus, sapien vitae porttitor vulputate, massa elit eleifend nisi, suscipit aliquet nulla enim in ligula. Quisque eu risus tellus. Praesent libero magna, auctor ac nulla et, mollis porta eros.</p>
+					</div>
 				</a>
 				<a class="more-box" href="">View all events</a>
 			</div><!-- /box -->
@@ -147,6 +156,10 @@
 				<a class="news-item" href="">
 					<p class="time">16 July 2014</p>
 					<h3>Writing longer assignments</h3>
+				</a>
+				<a class="news-item" href="">
+					<p class="time">16 July 2014</p>
+					<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
 				</a>
 				<a class="news-item" href="">
 					<p class="time">16 July 2014</p>

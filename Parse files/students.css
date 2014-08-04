@@ -840,6 +840,9 @@ form div.sq-backend-smallprint {
 .index-backdrop a:hover {
     text-decoration: none;
 }
+.index-backdrop .explore a .box:hover {
+	background-color: #DEF0F2 !important;
+}
 /* @end */
 
 /* @group Jumbotron */ /* ====================================================== Jumbotron*/
