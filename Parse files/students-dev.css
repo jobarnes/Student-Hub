@@ -8,6 +8,7 @@ bright blue:...#1F66AD
 #g-header  {
     box-sizing: content-box !important;
     -moz-box-sizing: content-box !important;
+    margin:  0;
 } 
 body {
     line-height: 1.4;
@@ -57,7 +58,7 @@ body.content h1 {
 /* @end */
 
 /* @group Main */ /* ============================================================= MAIN */
-main.backdrop {
+main.block {
     background-color: #fff;
 }
 .container.frame {
@@ -66,7 +67,7 @@ main.backdrop {
 .home .main .bc-backdrop {
     padding:  0;
 }
-.home .backdrop.local-quicklinks {
+.home .block.local-quicklinks {
     background-color: #D2DCC3;
 }
 .home .news-backdrop {
@@ -107,7 +108,7 @@ main .content {
 
 
 /* @group Main Navigation */ /* ==================================================== MAIN NAV */
-.backdrop.nav-backdrop {
+.block.nav-backdrop {
     background-color: #353736;
 }
 .nav-backdrop nav.container {
@@ -276,31 +277,42 @@ img.alignleft {
 header {
 /*  padding-top: 20px; */
 }
-header.backdrop {
-	height: 200px;
+.page-header.block {
+	border-bottom: 0;
+	height: 400px;
+	margin: 0;
 	overflow: hidden;
+	position: relative;
 }
 header .feat-img {
-	width: 100%;
+	width: auto;
+	min-height: 300px;
 }
-.backdrop.blue .branding {
-	position: relative;
-	top: -80px;
+.page-header.block .branding {
+	height: 100px;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	width: 100%;
 }
 img.logo {
     left:  0;
     top:  0;
 } 
 a.site-title {
+/*	background: #000;
+	border: 1px solid #fff; */
     color: #fff;
-    display: block;
-    font-size: 2em;
-    font-weight: 300;
+    display: inline-block;
+    font-size: 3.5em;
+    font-weight: 400;
     line-height: 1.2em;
-    margin:  0;
     padding: 20px 0;
-    position: relative;
-    top: -25px;
+    text-transform: uppercase;
+	text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
 }
 a.site-title:hover {
     text-decoration: none;
@@ -316,7 +328,6 @@ a.site-title:hover {
 /* @group Local footer */ /* ==================================================== Local footer */
 footer.local {
     background-color: #eee;
-    border-top: 1px solid #ccc;
     font-size: 0.90em;
     padding: 40px 0px;
     position: relative;
@@ -367,6 +378,9 @@ dl.inline dd + dd {
     position: relative;
     top: 0px;
 }
+#footernav .container {
+	padding: 0;
+}
 .footer-extras #about ul {
      list-style: none;
 }
@@ -405,7 +419,7 @@ dl.inline dd + dd {
 /* @end */
 
 /* @group Global footer */ /* ==================================================== */
-.page-footer.backdrop {
+.page-footer.block {
     background-color: #072442;
     padding-bottom: 50px;
     position: relative;
@@ -576,6 +590,7 @@ a.more-box {
 	border: 1px solid #ccc;
 	display: inline-block;
 	padding: 10px;
+	margin-top: 40px;
 	width: auto;
 }
 }
@@ -885,7 +900,7 @@ form div.sq-backend-smallprint {
 .local-quicklinks li.ask a, .local-quicklinks li.events a {
     background-color: #89A575;
 }
-.backdrop.local-quicklinks a:hover {
+.block.local-quicklinks a:hover {
     background-color: #637F50;
     text-decoration: none;
 }
@@ -901,10 +916,10 @@ form div.sq-backend-smallprint {
 .news-backdrop a:hover {
 	background-color: #eee;
 }
-.home .block.news, .home .block.events {
+.home .block-box.news, .home .block-box.events {
 	margin: 20px;
 }
-.block {
+.block-box {
 	background-color: #F1F1F3;
 	padding: 40px;
 }
@@ -918,10 +933,10 @@ form div.sq-backend-smallprint {
 	display: inline-block;
 	margin-bottom: 40px;
 }
-.block.news h3 {
+.block-box.news h3 {
 	margin-top: 0;
 }
-.block.news p {
+.block-box.news p {
 	margin-bottom: 0;
 }
 /* @end */
@@ -933,9 +948,6 @@ form div.sq-backend-smallprint {
 .box {
     padding: 40px;
     margin-bottom: 30px;
--webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.2);
--moz-box-shadow:    0px 0px 5px 0px rgba(50, 50, 50, 0.2);
-box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.2);
 }
 .box h2 {
     color: #036;
@@ -955,74 +967,29 @@ box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.2);
 .box p a {
     border-bottom: 1px dotted #ccc;
 }
+.explore .box {
+	border-bottom: 14px solid #1C97A7;
+}
+.admin .box {
+	border-bottom: 14px solid #1474A4;
+}
+.achieve .box {
+	border-bottom: 14px solid #BE4244;
+}
+.get-involved .box {
+	border-bottom: 14px solid #80619A;
+}
+.balance .box {
+	border-bottom: 14px solid #6E9844;
+}
+.future .box {
+	border-bottom: 14px solid #D1AC5C;
+}
 .index-backdrop a .box:hover {
     background-color: #efefef;
 }
 .index-backdrop a:hover {
     text-decoration: none;
-}
-/* @group Explore */
-.explore .box {
-	border-bottom: 14px solid #1C97A7;
-}
-.explore a .box:hover {
-	background-color: #E8F3F4;
-}
-.explore h2 {
-	color: #087F8C;
-}
-/* @end */
-
-/* @group Admin */
-.admin .box {
-	border-bottom: 14px solid #1474A4;
-}
-.admin a .box:hover {
-	background-color: #EAF3F7;
-}
-.admin h2 {
-	color: #04608E;
-}
-/* @end */
-
-/* @group Achieve */
-.achieve .box {
-	border-bottom: 14px solid #BE4244;
-}
-.achieve a .box:hover {
-	background-color: #F9E8E8;
-}
-.achieve h2 {
-	color: #A01C1C;
-}
-/* @end */
-
-.get-involved .box {
-	border-bottom: 14px solid #80619A;
-}
-.get-involved a .box:hover {
-	background-color: #F1EAF7;
-}
-.get-involved h2 {
-	color: #5E3A7C;
-}
-.balance .box {
-	border-bottom: 14px solid #6E9844;
-}
-.balance a .box:hover {
-	background-color: #EAF2E3;
-}
-.balance h2 {
-	color: #456D1C;
-}
-.future .box {
-	border-bottom: 14px solid #D1AC5C;
-}
-.future a .box:hover {
-	background-color: #F4EDDE;
-}
-.future h2 {
-	color: #996E12;
 }
 .index-backdrop .row, .grad-block .row {
 	margin:  0 -30px;
@@ -1222,14 +1189,10 @@ a.to-top {
 nav.container {
     padding: 0px 15px;
 } 
-a.site-title {
+/* a.site-title {
     padding: 0 0 30px;
-    margin-left: 0px; /*160px*/
     margin-top: 30px;
-    font-size: 3em;
-    font-weight: 100;
-    top: -35px;
-}
+} */
 .video-frame {
     height:250px;
 }
@@ -1273,9 +1236,6 @@ footer .meta {
 body.content h1 {
     padding-bottom: 1em;
 }
-a.site-title {
-    margin-left: 175px;
-}
 .video-frame {
     height:475px;
 }
@@ -1285,7 +1245,7 @@ ul#main-nav li {
 .menu-toggle-button {
     display:none;
 }
-.home .main .backdrop {
+.home .main .block {
     padding: 40px 0;
 }
 .home .local-quicklinks li {
@@ -1295,16 +1255,19 @@ ul#main-nav li {
 	height: 200px;
 	padding-top: 80px;
 }
-.home .block.news {
+.home .block-box.news {
 	margin-left: 20px;
 	margin-right: 0;
 }
-.home .block.events {
+.home .block-box.events {
 	margin-right: 20px;	
 	margin-left: 0;
 }
-.home .backdrop.local-quicklinks {
+.home .block.local-quicklinks {
 	padding-top: 60px;
+}
+.home .box {
+    min-height: 410px;
 }
 }
 
@@ -1332,6 +1295,9 @@ ul#main-nav li {
 #directory {
     padding-top: 0px; margin-top: 0;
     border-top: none;
+}
+#footernav-logo, #footernav-required {
+	margin-left: 0 !important;
 }
 footer #about {
     padding-top: 0em;
@@ -1432,9 +1398,6 @@ body .news-summary .jumbotron, .video-frame iframe {
 .home .loginorout {
     right: -15px;
 }
-.home .box {
-    min-height: 410px;
-}
 }
 
 @media screen and (max-width: 1200px) {
@@ -1444,7 +1407,7 @@ nav.container {
 }
 
 @media screen and (min-width: 1200px) {
-/* .quicklinks i.fa {
+/* .local-quicklinks i.fa {
     font-size: 3em;
 } */
 .news-summary {
@@ -1473,16 +1436,6 @@ body .news-summary .jumbotron {
 }
 #main-nav a {
     padding: 15px 24px;
-}
-header.backdrop {
-	height: 500px;
-}
-.backdrop.blue .branding {
-	position: absolute;
-	top: -200px;
-}
-a.site-title{
-	margin:  0 0 0 140px;
 }
 }
 

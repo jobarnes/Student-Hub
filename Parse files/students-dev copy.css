@@ -8,7 +8,6 @@ bright blue:...#1F66AD
 #g-header  {
     box-sizing: content-box !important;
     -moz-box-sizing: content-box !important;
-    margin: 0 !important;
 } 
 body {
     line-height: 1.4;
@@ -61,16 +60,13 @@ body.content h1 {
 main.backdrop {
     background-color: #fff;
 }
-.container.outer {
+.container.frame {
     padding: 0;
-}
-.home .main .backdrop {
-    padding: 25px 0;
 }
 .home .main .bc-backdrop {
     padding:  0;
 }
-.home .backdrop.first-block {
+.home .backdrop.local-quicklinks {
     background-color: #D2DCC3;
 }
 .home .news-backdrop {
@@ -78,6 +74,9 @@ main.backdrop {
 }
 .home .index-backdrop {
     background: #F4EFEB;
+}
+.home .grad-block {
+	background: #E5DBD3;
 }
 main .content {
     padding: 0 15px;
@@ -115,16 +114,19 @@ main .content {
     padding: 0;
 }
     ul#main-nav {
-        margin-bottom: 0;
+        margin: 0;
+        border-top: 1px solid #525453;
     }
     ul#main-nav li {
-        width: 100%;
-        padding:  0;
+        width: 49.6%;
+        padding:  0; margin: 0;
         border-bottom: 1px solid #525453;
+        border-right: 1px solid #525453;
     }
     #main-nav a {
         color: #fff;
         display: block;
+        margin: 0;
         padding: 15px 10px;
         text-transform: uppercase;
     }
@@ -272,19 +274,30 @@ img.alignleft {
 
 /* @group Header */ /* ============================================================ Header */
 header {
-    padding-top: 20px;
+/*  padding-top: 20px; */
+}
+header.backdrop {
+	height: 200px;
+	overflow: hidden;
+}
+header .feat-img {
+	width: 100%;
+}
+.backdrop.blue .branding {
+	position: relative;
+	top: -80px;
 }
 img.logo {
     left:  0;
     top:  0;
 } 
 a.site-title {
-    color: #036;
+    color: #fff;
     display: block;
     font-size: 2em;
     font-weight: 300;
     line-height: 1.2em;
-    margin:  0 0 0 140px;
+    margin:  0;
     padding: 20px 0;
     position: relative;
     top: -25px;
@@ -303,6 +316,7 @@ a.site-title:hover {
 /* @group Local footer */ /* ==================================================== Local footer */
 footer.local {
     background-color: #eee;
+    border-top: 1px solid #ccc;
     font-size: 0.90em;
     padding: 40px 0px;
     position: relative;
@@ -558,6 +572,13 @@ a.more {
     position: relative;
     top: 1px;
 }
+a.more-box {
+	border: 1px solid #ccc;
+	display: inline-block;
+	padding: 10px;
+	width: auto;
+}
+}
 /* @end */
 
 /* @group Alerts */ /* ========================================================= Alerts */
@@ -632,6 +653,67 @@ main #buttons a.btn-default {
 }
 #buttons .btn-default h2 {
     color: #2885A6;
+}
+/* @end */
+
+/* @group Media */
+main .media {
+    margin: 1em 0;
+}
+.media, .inner {
+    overflow: hidden;
+}
+.media .img, .media .date {
+    float: left;
+    margin-right: 1.5em;
+}
+.media .img img {
+    display: block;
+}
+.media .imgExt {
+    float: right;
+    margin-left: 1.5em;
+}
+.home .media {
+    margin-bottom: 1.5em;
+}
+.home .media .img {
+    width: 250px;
+}
+.home .media h2, .home .events-list h2 {
+    margin-top: 0;
+}
+.media a {
+    border-bottom: 0 none;
+}
+.index .events-list .row {
+    padding: 10px 0;
+}
+.index .media img {
+    width: 250px;
+}
+.media h3 {
+    margin-top: 0;
+}
+.media .date {
+	display: block;
+    background: linear-gradient(to bottom, #606C88 0%, #3F4C6B 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border-radius: 4px 4px 4px 4px;
+    color: #FFFFFF;
+    padding: 10px 15px;
+    text-align: center;
+}
+.media .day {
+    clear: both;
+    display: block;
+    font-size: 24px;
+    line-height: 1em;
+}
+.media .month {
+    text-transform: uppercase;
+}
+.media .year {
+    display: none;
 }
 /* @end */
 
@@ -779,40 +861,81 @@ form div.sq-backend-smallprint {
 
 
 /* @group Quicklinks */
-.home .quicklinks li {
+.local-quicklinks ul {
+	padding: 0; margin: 0;
+}
+.home .local-quicklinks li {
     background-image: none;
     float: left;
     padding: 0;
-    width: 20%;
+    width: 100%;
 }
-.quicklinks a {
+.local-quicklinks a {
     background-color: #A8B997;
     border-bottom: none;
     color: #fff;
     display: block;
-    font-size: 1.3em;
-    height: 200px;
-    padding-top: 100px;
+    font-size: 24px;
+    font-weight: 400;
+    padding: 20px;
     text-align: center;
     text-transform: uppercase;
     width: 100%;
 }
-.quicklinks a:hover {
+.local-quicklinks li.ask a, .local-quicklinks li.events a {
+    background-color: #89A575;
+}
+.backdrop.local-quicklinks a:hover {
+    background-color: #637F50;
     text-decoration: none;
 }
 /* @end */
 
+/* @group Home news */
+.news-backdrop .col-md-6 {
+	padding: 0;
+}
+.news-backdrop a {
+	text-decoration: none;	
+}
+.news-backdrop a:hover {
+	background-color: #eee;
+}
+.home .block.news, .home .block.events {
+	margin: 20px;
+}
+.block {
+	background-color: #F1F1F3;
+	padding: 40px;
+}
+.news-backdrop h2 {
+	border-bottom: 1px solid #ccc;
+	margin-top: 0;
+	padding-bottom: 1em;
+}
+.home .news-item, .home .event {
+	border-bottom: 0;
+	display: inline-block;
+	margin-bottom: 40px;
+}
+.block.news h3 {
+	margin-top: 0;
+}
+.block.news p {
+	margin-bottom: 0;
+}
+/* @end */
 
 /* @group Boxes */
 .home .box {
     background-color: #fff;
-    min-height: 350px;
-    border-bottom: 10px solid;
 }
 .box {
-    border: 1px solid #ccc;
     padding: 40px;
     margin-bottom: 30px;
+-webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.2);
+-moz-box-shadow:    0px 0px 5px 0px rgba(50, 50, 50, 0.2);
+box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.2);
 }
 .box h2 {
     color: #036;
@@ -821,7 +944,7 @@ form div.sq-backend-smallprint {
     padding-bottom: 10px;
     text-align: center;
     text-transform: uppercase;
-    border-bottom: 1px solid #666;
+    border-bottom: 1px solid #ccc;
 }
 .box p {
 	line-height: 1.8em;
@@ -832,17 +955,77 @@ form div.sq-backend-smallprint {
 .box p a {
     border-bottom: 1px dotted #ccc;
 }
-.home .explore-box {
-	border-bottom: 10px solid #1292A6;
-}
 .index-backdrop a .box:hover {
     background-color: #efefef;
 }
 .index-backdrop a:hover {
     text-decoration: none;
 }
-.index-backdrop .explore a .box:hover {
-	background-color: #DEF0F2 !important;
+/* @group Explore */
+.explore .box {
+	border-bottom: 14px solid #1C97A7;
+}
+.explore a .box:hover {
+	background-color: #E8F3F4;
+}
+.explore h2 {
+	color: #087F8C;
+}
+/* @end */
+
+/* @group Admin */
+.admin .box {
+	border-bottom: 14px solid #1474A4;
+}
+.admin a .box:hover {
+	background-color: #EAF3F7;
+}
+.admin h2 {
+	color: #04608E;
+}
+/* @end */
+
+/* @group Achieve */
+.achieve .box {
+	border-bottom: 14px solid #BE4244;
+}
+.achieve a .box:hover {
+	background-color: #F9E8E8;
+}
+.achieve h2 {
+	color: #A01C1C;
+}
+/* @end */
+
+.get-involved .box {
+	border-bottom: 14px solid #80619A;
+}
+.get-involved a .box:hover {
+	background-color: #F1EAF7;
+}
+.get-involved h2 {
+	color: #5E3A7C;
+}
+.balance .box {
+	border-bottom: 14px solid #6E9844;
+}
+.balance a .box:hover {
+	background-color: #EAF2E3;
+}
+.balance h2 {
+	color: #456D1C;
+}
+.future .box {
+	border-bottom: 14px solid #D1AC5C;
+}
+.future a .box:hover {
+	background-color: #F4EDDE;
+}
+.future h2 {
+	color: #996E12;
+}
+.index-backdrop .row, .grad-block .row {
+	margin:  0 -30px;
 }
 /* @end */
 
@@ -1041,7 +1224,7 @@ nav.container {
 } 
 a.site-title {
     padding: 0 0 30px;
-    margin-left: 160px;
+    margin-left: 0px; /*160px*/
     margin-top: 30px;
     font-size: 3em;
     font-weight: 100;
@@ -1097,15 +1280,43 @@ a.site-title {
     height:475px;
 }
 ul#main-nav li {
-    border-bottom: none;
-    width: auto;
+    width: 33%;
 }
 .menu-toggle-button {
     display:none;
 }
+.home .main .backdrop {
+    padding: 40px 0;
+}
+.home .local-quicklinks li {
+	width: 20%;
+}
+.home .local-quicklinks a {
+	height: 200px;
+	padding-top: 80px;
+}
+.home .block.news {
+	margin-left: 20px;
+	margin-right: 0;
+}
+.home .block.events {
+	margin-right: 20px;	
+	margin-left: 0;
+}
+.home .backdrop.local-quicklinks {
+	padding-top: 60px;
+}
 }
 
 @media screen and (min-width: 992px){
+ul#main-nav {
+	border-top: none;
+}
+ul#main-nav li {
+    border-bottom: 0;
+    border-right: 0;
+    width: auto;
+}
 .link-block > ul > li {
     width:  30%;
     margin-right: 3%;
@@ -1114,7 +1325,7 @@ ul#main-nav li {
     clear: both;
     border: none;
     padding-bottom: 20px;
-    }
+}
 #main-nav a {
     padding: 16px;
 }
@@ -1221,6 +1432,9 @@ body .news-summary .jumbotron, .video-frame iframe {
 .home .loginorout {
     right: -15px;
 }
+.home .box {
+    min-height: 410px;
+}
 }
 
 @media screen and (max-width: 1200px) {
@@ -1259,6 +1473,16 @@ body .news-summary .jumbotron {
 }
 #main-nav a {
     padding: 15px 24px;
+}
+header.backdrop {
+	height: 500px;
+}
+.backdrop.blue .branding {
+	position: absolute;
+	top: -200px;
+}
+a.site-title{
+	margin:  0 0 0 140px;
 }
 }
 
