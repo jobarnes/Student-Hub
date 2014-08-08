@@ -19,6 +19,7 @@
 
 <!-- SITE-SPECIFIC RESOURCES -->
 <link rel="stylesheet" type="text/css" href="_css/sh-dev.css" media="all" />
+<!--<link rel="stylesheet" type="text/css" href="_css/daisy-nav.css" media="all" />-->
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -84,22 +85,31 @@
 	<source srcset="%globals_asset_metadata_students.feature-img-sm_asset_url%" media="(min-width: 800px)">
 	<img srcset="%globals_asset_metadata_students.feature-img-md_asset_url%" alt="%globals_asset_metadata_students.feature-img-md_asset_friendly_name%">
 </picture> -->
-	<img class="feat-img img-responsive"
+	<!-- <img class="feat-img img-responsive"
 	src="_img/bronze-nike-placeholder-lo.jpg"
 	sizes="(min-width: 40em) 80vw, 100vw"
 	srcset="examples/images/medium.jpg 375w, 
 			examples/images/medium.jpg 480w, 
 			examples/images/large.jpg 768w" 
-	alt="Heading off on an adventure">
-	<div class="branding container"> <a class="site-title" href="">Student Hub</a> </div>
+	alt="Heading off on an adventure"> -->
+	
+	<picture class="feat-img img-responsive">
+		<source srcset="_img/adventure/adventure-lg.jpg" media="(min-width: 1200px)">
+		<source srcset="_img/adventure/adventure-md.jpg" media="(min-width: 1000px)">
+		<source srcset="_img/adventure/adventure-sm.jpg" media="(min-width: 481px)">
+		<source srcset="_img/adventure/adventure-xs.jpg">
+		<img srcset="_img/bronze-nike-placeholder-lo.jpg" alt="Nike placeholder" class="img-responsive">
+	</picture> 
+	
+	<div class="branding container"> <h1><a class="site-title" href="">Student Hub</a></h1> </div>
 	<!-- /branding --> 
 </header>
 <div class="block nav-backdrop">
 	<nav class="container" role="navigation"> 
 		<!-- Toggle button for menu, you can place it anywhere -->
-		<div type="button" class="menu-toggle-button" data-toogle="collapse" data-target="#main-nav"><i class="fa fa-bars"></i> Menu</div>
+        <div class="menu-toggle-button" data-menu-id="main-nav"><i class="fa fa-bars"></i> Menu</div>
 		<!-- Main navigation -->
-		<ul id="main-nav" class="list-inline" role="navigation">
+		<ul id="main-nav" class="list-inline menu-list" role="navigation">
 			<li class="home"><a href="http://cms.unimelb.edu.au/student-hub/home">Home</a></li>
 			<li class="explore"><a href="http://cms.unimelb.edu.au/student-hub/explore">Explore UoM</a></li>
 			<li class="admin"><a href="http://cms.unimelb.edu.au/student-hub/admin">Manage my admin</a></li>
@@ -115,7 +125,7 @@
 <!-- breadcrumbs --> 
 <!-- page title -->
 
-<main class="main backdrop" role="main"> 
+<main id="main-content" class="main backdrop" role="main"> 
 	
 	<!-- quicklinks block -->
 	<div class="block local-quicklinks">
@@ -361,8 +371,12 @@
 
 <script src="http://cms.unimelb.edu.au/__data/assets/js_file/0004/1091560/jquery.min.js"></script><!-- jquery.min.js --> 
 <script src="http://cms.unimelb.edu.au/__data/assets/js_file/0005/1091561/bootstrap.min.js"></script><!-- bootstrap.min.js --> 
-<script src="http://cms.unimelb.edu.au/__data/assets/js_file/0008/1105469/jquery.daisynav.min.js"></script><!-- daisyNav --> 
-<script src="http://cms.unimelb.edu.au/student-hub/support/scripts/local-functionsjs.js"></script><!-- local functions -->
+<script src="_scripts/jquery.daisynav.min.js"></script><!-- daisyNav --> 
+<script>
+jQuery(document).ready(function($){
+   $.daisyNav();
+});
+</script>
 
 </body>
 </html>
