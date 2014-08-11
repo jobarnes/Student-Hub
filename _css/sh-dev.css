@@ -111,6 +111,9 @@ main .content {
 .block.nav-backdrop {
     background-color: #353736;
 }
+.admin .nav-backdrop {
+	border-bottom: 15px solid #115B7E;
+}
 .nav-backdrop nav.container {
     padding: 0;
 }
@@ -141,8 +144,8 @@ main .content {
     li.explore a:hover {
         background-color: #1B95AA;
     }
-    li.admin a:hover {
-        background-color: #1474A4;
+    li.admin a:hover, li.admin.current a {
+        background-color: #115B7E;
     }
     li.achieve a:hover {
         background-color: #BD4245;
@@ -611,15 +614,39 @@ abbr[title], abbr[data-original-title] {
 /* @end */
 
 /* @group Breadcrumbs */ /* ===================================================== Breadcrumbs */
+main .block.bc-backdrop {
+	border-bottom: 1px solid #ddd;
+	padding: 0;
+	text-transform: uppercase;
+}
+.bc-backdrop .fa-home {
+	color: #777;
+	padding-right: 5px;
+}
 ol.breadcrumb, .container.breadcrumbs {
     margin-bottom: 0;
 }
 ol.breadcrumb {
-    background-color: #fff;
-    border-bottom: 1px solid #EFEFEF;
+	background-color: transparent;
     font-size: .9em;
     padding-top: 10px;
 }
+.breadcrumb a {
+	border-bottom: none;
+}
+/* @end */
+
+
+/* @group Page title */ /* ===================================================== Page title */
+main .block.page-title {
+	padding: 20px 0 20px 0;
+}
+.page-title h2 {
+	font-size: 2em;
+	font-weight: 100;
+	text-align: center;
+}
+
 /* @end */
 
 /* @group More */ /* ============================================================ More */
@@ -759,7 +786,14 @@ main .media {
 }
 .media .date {
 	display: block;
-    background: linear-gradient(to bottom, #606C88 0%, #3F4C6B 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background: #606c88; /* Old browsers */
+	background: -moz-linear-gradient(top,  #606c88 0%, #3f4c6b 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#606c88), color-stop(100%,#3f4c6b)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #606c88 0%,#3f4c6b 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #606c88 0%,#3f4c6b 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #606c88 0%,#3f4c6b 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #606c88 0%,#3f4c6b 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606c88', endColorstr='#3f4c6b',GradientType=0 ); /* IE6-9 */
     border-radius: 4px 4px 4px 4px;
     color: #FFFFFF;
     padding: 10px 15px;
@@ -963,7 +997,7 @@ form div.sq-backend-smallprint {
 a.news-item:hover {
 	background-color: #CEDEE5;
 }
-.home .block-box.news, .home .block-box.events {
+.block-box.news, .block-box.events {
 	margin: 20px;
 }
 .block-box {
@@ -995,7 +1029,7 @@ a.news-item:hover {
 /* @end */
 
 /* @group Boxes */
-.home .box {
+.box {
     background-color: #fff;
 }
 .box {
@@ -1256,6 +1290,17 @@ a.to-top {
 /* @end */
 
 
+/* @group Admin */
+.admin main {
+	background-color: #E5EDF0;
+}
+.admin .news-backdrop {
+	background-color: #BFD2D9;
+}
+
+/* @end */
+
+
 /* @group Media queries */
 
 /* RESPONSIVE MEDIA QUERIES */
@@ -1333,7 +1378,7 @@ body.content h1 {
 ul#main-nav li {
     width: 33.33%;
 }
-.home .main .block {
+.main .block {
     padding: 40px 0;
 }
 .home .block.local-quicklinks {
@@ -1342,8 +1387,15 @@ ul#main-nav li {
 .home .block-box.news, .home .block-box.events {
 	margin: 0 0 40px 0;
 }
+.bc-backdrop .row {
+	margin: 0 -30px;
+}
 .page-header.block img {
 	width: 100%;
+}
+a.site-title.blue {
+	color: #036;
+	text-shadow: none;
 }
 }
 
@@ -1478,6 +1530,12 @@ body .news-summary .jumbotron, .video-frame iframe {
 .page-header.block {
 	height:  400px;
 }
+main .block.page-title {
+	padding: 40px 0 0 0;
+}
+.page-title h2 {
+	text-align: left;
+}
 }
 @media screen and (min-width: 1050px) {
 .menu-toggle-button {
@@ -1525,6 +1583,10 @@ nav.container {
 .page-header.block {
 	height:  500px;
 }
+.page-header.block img {
+	min-height:  500px;
+	width: 100%;
+}
 .news-summary {
     top: -320px;
     left: 15px;
@@ -1551,10 +1613,6 @@ body .news-summary .jumbotron {
 }
 #main-nav a {
     padding: 15px 24px;
-}
-.page-header.block img {
-	min-height:  500px;
-	width: auto;
 }
 }
 
