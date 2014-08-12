@@ -139,22 +139,22 @@ main .content {
         text-decoration: none;
     }
     #main-nav .home a:hover {
-        background-color: #2D6098;
+        background-color: #384E7A /*#2D6098*/;
     }
     li.explore a:hover {
-        background-color: #1B95AA;
+        background-color: #2A8896; /* #1B95AA; */
     }
     li.admin a:hover, li.admin.current a {
         background-color: #115B7E;
     }
     li.achieve a:hover {
-        background-color: #BD4245;
+        background-color: #A03536; /* #BD4245 */
     }
     li.get-involved a:hover {
-        background-color: #80619A;
+        background-color: #684D7F; /* #80619A */
     }
     li.balance a:hover {
-        background-color: #6E9844;
+        background-color: #A03536; /* #6E9844; */
     }
     li.future a:hover {
         background-color: #B19048;
@@ -168,6 +168,9 @@ main .content {
         cursor:pointer;
         text-transform: uppercase;
         color:#ccc;
+    }
+    .menu-toggle-button.active {
+    	background-color:#252826;
     }
     ul.menu-list {
         display: none;
@@ -318,7 +321,7 @@ a.site-title {
 	border: 1px solid #fff; */
     color: #fff;
     display: inline-block;
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: 400;
     line-height: 1.2em;
     padding: 20px 0;
@@ -330,7 +333,7 @@ a.site-title {
 }
 a.site-title:hover {
     text-decoration: none;
-    color: #3276B1;
+    color: #ddd;
 }
 .container.main {
     padding: 40px 0px 60px;
@@ -1032,6 +1035,11 @@ a.news-item:hover {
 .box {
     background-color: #fff;
 }
+.box, .block-box {
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.25);
+	-moz-box-shadow:    0px 0px 10px 0px rgba(50, 50, 50, 0.25);
+	box-shadow:         0px 0px 10px 0px rgba(50, 50, 50, 0.25);
+}
 .box {
     padding: 40px;
     margin-bottom: 30px;
@@ -1054,8 +1062,20 @@ a.news-item:hover {
 .box p a {
     border-bottom: 1px dotted #ccc;
 }
-.box:hover h2, .box:hover p {
+.box ul {
+	margin-top: 20px;
+	text-align: center;
+}
+.box ul, main .box ul li {
+	padding-left: 0;
+	margin-left: 0;
+}
+.box:hover h2, .box:hover p, .box:hover a {
 	color: #fff;
+}
+.content .box a:hover {
+/*	border-top: 1px solid #fff; */
+	border-bottom: 1px solid #fff;
 }
 .explore .box {
 	border-bottom: 14px solid #1C97A7;
@@ -1064,10 +1084,10 @@ a.news-item:hover {
 	background-color: #1C97A7 !important;
 }
 .admin .box {
-	border-bottom: 14px solid #1474A4;
+	border-bottom: 14px solid #115B7E;
 }
-#admin-box:hover {
-	background-color: #1474A4;
+#admin-box:hover, .admin .index-backdrop .box:hover {
+	background-color: #115B7E;
 }
 .achieve .box {
 	border-bottom: 14px solid #BE4244;
@@ -1421,6 +1441,9 @@ a.site-title.blue {
 }
 .home .box {
     min-height: 410px;
+}
+.content .box {
+	min-height: 370px;
 }
 #footernav-logo, #footernav-required {
 	margin-left: 0 !important;
