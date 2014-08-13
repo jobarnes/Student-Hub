@@ -15,20 +15,23 @@
 <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic,900,900italic' rel='stylesheet' type='text/css'>
 <link href="http://cms.unimelb.edu.au/__data/assets/file/0019/1091521/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
-<script src="_scripts/picturefill.min.js"  async></script><!-- Picturefill -->
+<script src="http://cms.unimelb.edu.au/__data/assets/js_file/0004/1091560/jquery.min.js"></script><!-- jquery.min.js --> 
+<script src="http://cms.unimelb.edu.au/__data/assets/js_file/0005/1091561/bootstrap.min.js"></script><!-- bootstrap.min.js --> 
+<script src="_scripts/picturefill.min.js" async></script><!-- Picturefill -->
 
 <!-- SITE-SPECIFIC RESOURCES -->
 <link rel="stylesheet" type="text/css" href="_css/sh-dev.css" media="all" />
 <!--<link rel="stylesheet" type="text/css" href="_css/daisy-nav.css" media="all" />-->
 
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-  <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-  <script src="http://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-<![endif]-->
-
 <!--[if lt IE 8]>
 <link rel="stylesheet" type="text/css" href="http://cms.unimelb.edu.au/student-hub/support/base/students-ie.css" media="all" />
+<![endif]-->
+
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="_css/html5shiv.min.js"></script>
+<script src="_css/respond.min.js"></script>
 <![endif]-->
 
 </head>
@@ -93,7 +96,7 @@
 			examples/images/large.jpg 768w" 
 	alt="Heading off on an adventure"> -->
 	
-	<picture class="feat-img img-responsive">
+	<picture class="feat-img">
 		<source srcset="_img/adventure/adventure-lg.jpg" media="(min-width: 1200px)">
 		<source srcset="_img/adventure/adventure-md.jpg" media="(min-width: 1000px)">
 		<source srcset="_img/adventure/adventure-sm.jpg" media="(min-width: 481px)">
@@ -371,8 +374,7 @@
 <!-- Google analytics block --> 
 <!-- Google aearch block --> 
 
-<script src="http://cms.unimelb.edu.au/__data/assets/js_file/0004/1091560/jquery.min.js"></script><!-- jquery.min.js --> 
-<script src="http://cms.unimelb.edu.au/__data/assets/js_file/0005/1091561/bootstrap.min.js"></script><!-- bootstrap.min.js --> 
+
 <script src="_scripts/jquery.daisynav.min.js"></script><!-- daisyNav --> 
 <script>
 jQuery(document).ready(function($){
