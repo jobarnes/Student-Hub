@@ -319,6 +319,7 @@ img.logo {
 a.site-title {
 /*	background: #000;
 	border: 1px solid #fff; */
+	font-family: 'Roboto Condensed', 'Roboto', sans-serif;
     color: #fff;
     display: inline-block;
     font-size: 1.8em;
@@ -1671,6 +1672,9 @@ body .news-summary .jumbotron {
 }
 #main-nav a {
     padding: 15px 24px;
+}
+a.site-title {
+	font-size: 3em;
 }
 }
 
