@@ -28,6 +28,7 @@ body {
 /* @end */
 
 /* @group Elements */ /* ====================================================== Elements */
+
 .clearfix:after {
      visibility: hidden;
      display: block;
@@ -41,6 +42,20 @@ body {
 * html .clearfix { height: 1%; }
 .clearfix { display: block; }
 /* close commented backslash hack */
+
+.tight {
+	margin-left: -15px;
+	margin-right: -15px;
+}
+.well, .embed-responsive {
+	margin: 40px 0;
+}
+.well h2 {
+	margin-top: 0;
+}
+
+
+
 /* @end */
 
 /* @group Headings */ /* =========================================================== Headings */
@@ -112,6 +127,9 @@ main .content {
     main p, main ul, main ol, main td, tbody th {
         line-height: 1.6em;
         color: #666;
+}
+.content-inner main {
+	padding: 0 25px;
 }
 .main li ul, .main li ol {
        padding-top: 0.5em;
@@ -212,6 +230,7 @@ main .content {
 .table.blue thead th {
     background-color: #036;
     color: #fff;
+    border-color: #2A547F;
 }
 .table.blue tbody th {
     background-color: #EFEFEF;
@@ -225,7 +244,7 @@ ul.buttleft, .buttleft ul {
     padding-left: 0px;
 }
 .main ul li, .link-block li li {
-    background: url("mysource_files/tiny-grey-arow.png") no-repeat scroll 0 6px transparent;
+    background: url("https://its.unimelb.edu.au/__data/assets/image/0020/641171/arrow-tiny-grey.gif") no-repeat scroll 0 6px transparent; /* CHANGE LINK FOR SQUIZ SITE */
     list-style: none outside none;
     padding-left: 12px;
     padding-bottom: 0.5em;
@@ -590,6 +609,9 @@ abbr[title], abbr[data-original-title] {
 .section {
     padding-top: 40px;
 }
+.section-b {
+	padding:  40px 0;
+}
 .landing.section {
     padding-top: 20px;
 }
@@ -682,6 +704,18 @@ main .block.page-title {
 	font-size: 2em;
 	font-weight: 100;
 	text-align: center;
+}
+
+/* @end */
+
+/* @group Aside */
+aside {
+	margin-top: 60px;
+}
+.aside-block {
+	background-color: #efefef;
+	padding: 15px 30px;
+	margin-bottom: 30px;
 }
 
 /* @end */
@@ -1384,6 +1418,7 @@ a.to-top {
 
 
 /* @group Admin */
+
 .news-backdrop .row {
 	margin-left: -35px;
 	margin-right: -35px;
@@ -1397,6 +1432,13 @@ a.to-top {
 
 /* @end */
 
+
+.admin.content-inner main {
+	background-color: #fff;
+}
+.admin.content-inner p {
+	line-height: 1.8em;
+}
 
 /* @group Media queries */
 
@@ -1674,6 +1716,11 @@ main .block.page-title {
 .block-wrap {
 	float:  none;
 	width:  100%;
+}
+aside {
+	margin-top: 0;
+	position: relative;
+	top: -35px;
 }
 }
 @media screen and (min-width: 1050px) {
