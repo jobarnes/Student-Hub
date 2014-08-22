@@ -14,21 +14,25 @@
 <!-- FRAMEWORK -->
 <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic,900,900italic' rel='stylesheet' type='text/css'>
-<link href="http://cms.unimelb.edu.au/__data/assets/file/0019/1091521/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
-<script src="_scripts/picturefill.min.js"  async></script><!-- Picturefill -->
+<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700' rel='stylesheet' type='text/css'>
+<link href="_css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+<script src="http://cms.unimelb.edu.au/__data/assets/js_file/0004/1091560/jquery.min.js"></script><!-- jquery.min.js --> 
+<script src="http://cms.unimelb.edu.au/__data/assets/js_file/0005/1091561/bootstrap.min.js"></script><!-- bootstrap.min.js --> 
+<script src="_scripts/picturefill.min.js" async></script><!-- Picturefill -->
 
 <!-- SITE-SPECIFIC RESOURCES -->
 <link rel="stylesheet" type="text/css" href="_css/sh-dev.css" media="all" />
 <!--<link rel="stylesheet" type="text/css" href="_css/daisy-nav.css" media="all" />-->
 
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-  <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-  <script src="http://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-<![endif]-->
-
 <!--[if lt IE 8]>
 <link rel="stylesheet" type="text/css" href="http://cms.unimelb.edu.au/student-hub/support/base/students-ie.css" media="all" />
+<![endif]-->
+
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="_scripts/html5shiv.min.js"></script>
+<script src="_scripts/respond.min.js"></script>
 <![endif]-->
 
 </head>
@@ -189,22 +193,26 @@
 
 <div class="block index-backdrop">
 	<div class="container">
-		<div class="row">
-			<div class="col-md-4 enrolment">
+	<div class="box-wrap long">
+			<div class="box-frame enrolment">
 				<div class="box" id="enrol-box">
 					<h2>Enrolment</h2>
 					<ul>
-						<li><a href="">Enrolment + re-enrolment</a></li>
-						<li><a href="">Class registration</a></li>
 						<li><a href="">Leave of absence</a></li>
 						<li><a href="">Timetable</a></li>
+						<li><a href="">Study plan</a></li>
+						<li><a href="">Student handbook</a></li>
+						<li><a href="">RHD candidature</a></li>
+						<li><a href="">Study plan</a></li>
+						<li><a href="">Student handbook</a></li>
+						<li><a href="">RHD candidature</a></li>
 						<li><a href="">Study plan</a></li>
 						<li><a href="">Student handbook</a></li>
 						<li><a href="">RHD candidature</a></li>
 					</ul>
 				</div>
 			</div>
-			<div class="col-md-4 exams">
+			<div class="box-frame exams">
 				<div class="box" id="exams-box">
 					<h2>Exams + assessment</h2>
 					<ul>
@@ -217,7 +225,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="col-md-4 money">
+			<div class="box-frame money">
 				<div class="box" id="money-box">
 					<h2>Money</h2>
 					<ul>
@@ -227,10 +235,7 @@
 					</ul>
 				</div>
 			</div>
-		</div>
-		<!-- /row -->
-		<div class="row">
-			<div class="col-md-4 international">
+			<div class="box-frame international">
 				<div class="box" id="international-box">
 					<h2>International students</h2>
 					<ul>
@@ -238,7 +243,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="col-md-4 conduct">
+			<div class="box-frame conduct">
 				<div class="box" id="conduct-box">
 					<h2>Student conduct</h2>
 					<ul>
@@ -250,7 +255,7 @@
 					</ul>
 					</div>
 				</div>
-			<div class="col-md-4 dates">
+			<div class="box-frame dates">
 				<div class="box" id="dates-box">
 					<h2>Key dates</h2>
 					<ul>
@@ -261,7 +266,6 @@
 				</div>
 			</div>
 		</div>
-		<!-- /row --> 
 	</div>
 	<!-- /container --> 
 </div>
@@ -277,6 +281,34 @@
 			<div class="ask row">
 			<h2 class="section-title">Contact us</h2>
 				<div class="col-sm-6 list-group">
+					<a class="tel list-group-item">
+						<i class="fa fa-phone fa-fw fa-2x"></i> 
+						<span class="topic">Call 13 MELB (13 6352)</span>
+						<span class="small-text">Open from 9-5, Monday to Friday</span>
+					</a>
+					<a class="ask-current list-group-item" href="http://ask.unimelb.edu.au">
+						<i class="fa fa-question fa-fw fa-2x"></i>
+						<span class="topic">ask.unimelb.edu.au</span>
+					</a>
+					<a class="ask-current list-group-item" href="http://my.unimelb.edu.au">
+						<i class="fa fa-mortar-board fa-fw fa-2x"></i>
+						<span class="topic">my.unimelb.edu.au</span>
+					</a>
+					<a class="email-future list-group-item" href="mailto:13melb@unimelb.edu.au">
+						<i class="fa fa-envelope-o fa-fw fa-2x"></i>
+						<span class="topic">Email us</span>
+					</a>
+				</div>
+				<div class="col-sm-6 list-group">
+					<a class="chat list-group-item" href="#" onclick="open_chat()" id="chaticon">
+						<i class="fa fa-comments fa-fw fa-2x"></i> 
+						<span class="topic">Live chat</span>
+						<span class="small-text">Available from 10am</span>
+					</a>
+					<a class="sas list-group-item" href="//student-advising-system.unimelb.edu.au">
+						<i class="fa fa-calendar fa-fw fa-2x"></i>
+						<span class="topic">Make an appointment (student advice)</span>
+					</a>
 					<a class="facebook list-group-item" href="//facebook.com/13melb">
 						<i class="fa fa-facebook fa-fw fa-2x"></i> 
 						<span class="topic">Visit 13 MELB on Facebook</span>
@@ -285,60 +317,38 @@
 						<i class="fa fa-twitter fa-fw fa-2x"></i> 
 						<span class="topic">Contact 13 MELB on Twitter</span>
 					</a>
-					<a class="tel list-group-item">
-						<i class="fa fa-phone fa-fw fa-2x"></i> 
-						<span class="topic">Call 13 MELB (13 6352)</span>
-						<span class="small-text">Open from 9-5, Monday to Friday.<br>
-						Call +61 3 903 55511 from overseas</span>
-					</a>
-				</div>
-				<div class="col-sm-6 list-group">
-					<a class="chat list-group-item" href="#" onclick="open_chat()" id="chaticon">
-						<i class="fa fa-comments fa-fw fa-2x"></i> 
-						<span class="topic">Chat with 13 MELB</span>
-						<span class="small-text">Available from 10am</span>
-					</a>
-					<a class="email-current list-group-item" href="http://ask.unimelb.edu.au/app/answers/detail/a_id/5961">
-						<i class="fa fa-envelope fa-fw fa-2x"></i>
-						<span class="topic">Email us about current study</span>
-						<span class="small-text">Current estimated wait time = 5 business days</span>
-					</a>
-					<a class="email-future list-group-item" href="http://futurestudents.unimelb.edu.au/contact">
-						<i class="fa fa-envelope-o fa-fw fa-2x"></i>
-						<span class="topic">Email us about future study</span>
-					</a>
 				</ul>
 				</div>
 			</div>
 			<!-- <a class="">Glossary</a> -->
 			</div>
-		<div class="meta col-md-4">
-		<h2 class="section-title">About this page</h2>
-			<div class="auth-meta block-wrap">
-				<div class="maint block clearfix">
-					<span class="label">Maintainer</span>
-					<span class="maintainer">
-					<a class="email" href="mailto:%asset_metadata_UM.Maintainer.Email%">Maintainer name and email <i class="fa fa-envelope-o"></i></a>
-					</span>
+			<div class="meta col-md-4">
+			<h2 class="section-title">About this page</h2>
+				<div class="auth-meta block-wrap">
+					<div class="maint block clearfix">
+						<span class="label">Maintainer</span>
+						<span class="maintainer">
+						<a class="email" href="mailto:%asset_metadata_UM.Maintainer.Email%">Maintainer name and email <i class="fa fa-envelope-o"></i></a>
+						</span>
+					</div>
+					<div class="auth block clearfix">
+						<span class="label">Authoriser</span>
+						<span class="authoriser">Authoriser's name or title</span>
+					</div>
 				</div>
-				<div class="auth block clearfix">
-					<span class="label">Authoriser</span>
-					<span class="authoriser">Authoriser's name or title</span>
+				<div class="page-meta block-wrap">
+					<div class="created block clearfix">
+						<span class="label">Date created</span>
+						<span class="date">29 July 2014</span>
+					</div>
+					<div class="modified block clearfix">
+						<span class="label">Last modified</span>
+						<span class="date">29 July 2014</span>
+					</div>
+					</div>
 				</div>
 			</div>
-			<div class="page-meta block-wrap">
-				<div class="created block clearfix">
-					<span class="label">Date created</span>
-					<span class="date">29 July 2014</span>
-				</div>
-				<div class="modified block clearfix">
-					<span class="label">Last modified</span>
-					<span class="date">29 July 2014</span>
-				</div>
-				</div>
-			</div>
-		</div>
-		<!-- /meta --> 
+			<!-- /meta --> 
 		</div>
 		<!-- /row --> 
 	</div>
