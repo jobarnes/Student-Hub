@@ -145,9 +145,25 @@ main .content {
 .block.nav-backdrop {
     background-color: #353736;
 }
-.admin .nav-backdrop {
-	border-bottom: 15px solid #115B7E;
-}
+	.explore .nav-backdrop {
+		border-bottom: 15px solid #2A8896;;
+	}
+	.admin .nav-backdrop {
+		border-bottom: 15px solid #115B7E;
+	}
+	.achieve .nav-backdrop {
+		border-bottom: 15px solid #A03536;
+	}
+	.involved .nav-backdrop {
+		border-bottom: 15px solid #684D7F;
+	}
+	.balance .nav-backdrop {
+		border-bottom: 15px solid #58822E;
+	}
+	.future .nav-backdrop {
+		border-bottom: 15px solid #B19048;
+	}
+
 .nav-backdrop nav.container {
     padding: 0;
 }
@@ -173,25 +189,25 @@ main .content {
     #main-nav a:hover {
         text-decoration: none;
     }
-    #main-nav .home a:hover {
+    #main-nav .home a:hover, .home li.home {
         background-color: #384E7A /*#2D6098*/;
     }
-    li.explore a:hover {
+    li.explore a:hover, .explore li.explore {
         background-color: #2A8896; /* #1B95AA; */
     }
-    li.admin a:hover, li.admin.current a {
+    li.admin a:hover, /* li.admin.current a, */.admin li.admin {
         background-color: #115B7E;
     }
-    li.achieve a:hover {
+    li.achieve a:hover, .achieve li.achieve {
         background-color: #A03536; /* #BD4245 */
     }
-    li.get-involved a:hover {
+    li.get-involved a:hover, .involved li.get-involved {
         background-color: #684D7F; /* #80619A */
     }
-    li.balance a:hover {
+    li.balance a:hover, .balance li.balance {
         background-color: #58822E; /* #6E9844; */
     }
-    li.future a:hover {
+    li.future a:hover, .future li.future {
         background-color: #B19048;
     }
     ul#main-nav li.future {
@@ -1439,7 +1455,7 @@ a.to-top {
 
 /* @group Admin */
 
-.news-backdrop .row {
+.content .news-backdrop .row {
 	margin-left: -35px;
 	margin-right: -35px;
 }
@@ -1449,7 +1465,24 @@ a.to-top {
 .admin .news-backdrop {
 	background-color: #BFD2D9;
 }
-
+.explore main {
+	background-color: #E6EFEF;
+}
+.involved main {
+	background-color: #EEEAF2;
+}
+.achieve main {
+	background-color: #F4E8E8;
+}
+.balance main {
+	background-color: #ECF2E6;
+}
+.future main {
+	background-color: #F2EDE3;
+}
+.content-inner main {
+	background-color: #fff;
+}
 /* @end */
 
 
@@ -1530,7 +1563,9 @@ main .list-2-col li {
     padding-top: 0;
 }
 body.content h1 {
-    padding-bottom: 1em;
+	font-size: 36px;
+	font-weight: 100;
+	padding-bottom: 1em;
 }
 .video-frame {
     height:475px;
