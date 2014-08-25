@@ -17,7 +17,7 @@
             </head>
             <body></body>
         </html>        
-        <MySource_PRINT id_name="exit_area" />        
+        <MySource_PRINT id_name="exit_area" />
     </MySource_THEN>
 </MySource_AREA>
 <!-- / EASY EDIT -->
@@ -82,9 +82,9 @@
     <MySource_DECLARE name="body_class" value="no-logo blue" type="text" description="Classes that are added to the body tag."/>
 </MySource_AREA>
 
-<MySource_AREA id_name="content_vars" design_area="declared_vars" print="no">
-    <MySource_DECLARE name="content_class" value="col-md-12" type="text" description="Classes that are added to the content block."/>
-</MySource_AREA>
+<!-- <MySource_AREA id_name="content_vars" design_area="declared_vars" print="no">
+    <MySource_DECLARE name="content_class" value="col-md-12" type="text" print="no" description="Classes that are added to the content block."/>
+</MySource_AREA> -->
 </head>
 
 <body class="<MySource_PRINT id_name='template_vars' var='body_class' /> %globals_asset_metadata_students.page-type% %globals_asset_metadata_students.section% a-%globals_asset_assetid%">
@@ -149,7 +149,7 @@
         <source srcset="%globals_asset_metadata_students.feature-img-lg_asset_url%" media="(min-width: 1200px)">
         <source srcset="%globals_asset_metadata_students.feature-img-md_asset_url%" media="(min-width: 1000px)">
         <source srcset="%globals_asset_metadata_students.feature-img-sm_asset_url%" media="(min-width: 481px)">
-        <source srcset="%globals_asset_metadata_students.feature-img-xs_asset_url%">
+        <source srcset="%globals_asset_metadata_students.feature-img-xs_asset_url%" media="(max-width: 480px)">
         <img srcset="%globals_asset_metadata_students.feature-img-md_asset_url%" alt="%globals_asset_metadata_students.feature-img-md_asset_friendly_name%" class="img-responsive">
     </picture> 
     
@@ -173,10 +173,12 @@
 <main id="main-content" class="main backdrop" role="main">
 
 <!-- pre-breadcrumb content -->
-<MySource_AREA id_name="before_breadcrumbs" design_area="nest_content" cache="1">
-    <MySource_SET name="type_codes" value="page" />
+<MySource_AREA id_name="before_breadcrumbs" design_area="nest_content" print="no" cache="1">
+           <MySource_SET name="type_codes" value="page" />
 </MySource_AREA>
 <!-- /pre-breadcrumb content -->
+
+%globals_asset_metadata_students.section-news^as_asset:asset_contents%
 
 <div class="backdrop bc-backdrop">
 <MySource_AREA id_name="page_lineage" design_area="asset_lineage">
@@ -198,16 +200,25 @@
 </MySource_AREA>
 </div><!-- /breadcrumb-backdrop -->
 
-<div class="backdrop first-block">
-    <div class="container outer buttleft">
-    <div class="row content">
-    <div class="<MySource_PRINT id_name='content_vars' var='content_class' print='yes' />">
-        <MySource_AREA id_name="auto_heading" design_area="asset_lineage"><h1><MySource_PRINT id_name="__global__" var="asset_name" /></h1></MySource_AREA>
+
+<!-- inner content starting block -->
+<MySource_AREA id_name="content_start" design_area="nest_content" cache="1">
+    <MySource_SET name="type_codes" value="page" />
+</MySource_AREA>
+<!-- /inner content start -->
+
+
+    <div class="page-content">
+        <MySource_AREA id_name="auto_heading" design_area="asset_lineage"><div class="backdrop page-title"><div class="container"><div class="row"><h1><MySource_PRINT id_name="__global__" var="asset_name" /></h1></div></div></div></MySource_AREA>
         <MySource_AREA id_name="body" design_area="body" />
     </div><!-- / var content_class -->
-    </div><!-- /row -->
-    </div><!-- /container -->    
-</div><!-- / backdrop -->   
+
+
+<!-- inner content end -->
+<MySource_AREA id_name="content_end" design_area="nest_content" cache="1">
+    <MySource_SET name="type_codes" value="page" />
+</MySource_AREA>
+<!-- /inner content end -->
 </main>
 
 
