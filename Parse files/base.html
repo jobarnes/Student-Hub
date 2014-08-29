@@ -99,6 +99,7 @@
     })(window,document,'script','dataLayer','GTM-7JB9');</script> 
 <!-- End Google Tag Manager --> 
 
+<div class="hidden-xs">
 <!-- Global header -->
 <div id="g-header" role="banner">
     <div class="wrapper container">
@@ -138,8 +139,8 @@
         <hr class="g-clear-floats">
     </div>
 </div>
-<div id="g-header-blue-block"></div>
 <span class="g-clear-floats"></span>
+</div>
 <!-- / Global header -->
 
 
@@ -150,9 +151,10 @@
         <source srcset="%globals_asset_metadata_students.feature-img-md_asset_url%" media="(min-width: 1000px)">
         <source srcset="%globals_asset_metadata_students.feature-img-sm_asset_url%" media="(min-width: 481px)">
         <source srcset="%globals_asset_metadata_students.feature-img-xs_asset_url%" media="(max-width: 480px)">
-        <img srcset="%globals_asset_metadata_students.feature-img-md_asset_url%" alt="%globals_asset_metadata_students.feature-img-md_asset_friendly_name%" class="img-responsive">
+        <img srcset="%globals_asset_metadata_students.feature-img-md_asset_url%" alt="%globals_asset_metadata_students.feature-img-md_asset_friendly_name%">
     </picture> 
     
+    <img class="visible-xs logo-small" src="//d205bjjfnaycdb.cloudfront.net/uom-v.jpg">
     
     <div class="branding container">
          <MySource_AREA id_name="branding_space" design_area="nest_content" cache="1">
@@ -223,35 +225,39 @@
 
 
 <footer class="backdrop local" role="contentinfo">
+
+
    <div class="container">
    <div class="row">
-   <div class="footer-content col-sm-4">
+   <div class="footer-content col-sm-8">
    <MySource_AREA id_name="footer_content" design_area="nest_content" cache="1"><MySource_SET name="type_codes" value="page" /></MySource_AREA>
    </div>
   
-   <div class="meta col-sm-8">
-   <dl class="auth-meta">
-   <span class="col-sm-3">
-       <dt>Maintainer</dt>   
-       <dd class="cf"><a class="email" href="mailto:%asset_metadata_UM.Maintainer.Email%">%asset_metadata_UM.Maintainer.Name% <i class="fa fa-envelope-o"></i></a></dd>
-   </span>
-   <span class="col-sm-3">  
-       <dt>Authoriser</dt>
-       <dd class="cf">%asset_metadata_UM.Authoriser.Title%</dd>
-   </span>
-   </dl>
-
-   
-   <dl class="page-meta">
-   <span class="col-sm-3"> 
-       <dt>Date created</dt>
-       <dd>%asset_created_j% %asset_created_F% %asset_created_Y%</dd>
-   </span> 
-   <span class="col-sm-3"> 
-       <dt>Last modified</dt>
-       <dd>%asset_updated_j% %asset_updated_F% %asset_updated_Y%</dd>
-   </span>
-   </dl>
+   <div class="meta col-sm-4">
+            <h2 class="section-title">About this page</h2>
+                <div class="auth-meta block-wrap">
+                    <div class="maint block clearfix">
+                        <span class="label">Maintainer</span>
+                        <span class="maintainer">
+                        <a class="email" href="mailto:%asset_metadata_UM.Maintainer.Email%">Maintainer name and email <i class="fa fa-envelope-o"></i></a>
+                        </span>
+                    </div>
+                    <div class="auth block clearfix">
+                        <span class="label">Authoriser</span>
+                        <span class="authoriser">Authoriser's name or title</span>
+                    </div>
+                </div>
+                <div class="page-meta block-wrap">
+                    <div class="created block clearfix">
+                        <span class="label">Date created</span>
+                        <span class="date">29 July 2014</span>
+                    </div>
+                    <div class="modified block clearfix">
+                        <span class="label">Last modified</span>
+                        <span class="date">29 July 2014</span>
+                    </div>
+                    </div>
+                </div>
    </div><!-- /meta -->
    </div><!-- /row -->
    </div><!-- / container -->
@@ -291,6 +297,50 @@
 <!-- /global footer -->
 
 <MySource_AREA id_name="foot_fw" design_area="nest_content" cache="1"><MySource_SET name="type_codes" value="page" /></MySource_AREA>
+<script>
+// Include the UserVoice JavaScript SDK (only needed once on a page)
+UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/amCH8L2nRbs2V5c4o3KV0A.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
+
+//
+// UserVoice Javascript SDK developer documentation:
+// https://www.uservoice.com/o/javascript-sdk
+//
+
+// Set colors
+UserVoice.push(['set', {
+  accent_color: '#e2753a',
+  trigger_color: 'white',
+  trigger_background_color: '#e2753a'
+}]);
+
+// Identify the user and pass traits
+// To enable, replace sample data with actual user traits and uncomment the line
+UserVoice.push(['identify', {
+  //email:      'john.doe@example.com', // User’s email address
+  //name:       'John Doe', // User’s real name
+  //created_at: 1364406966, // Unix timestamp for the date the user signed up
+  //id:         123, // Optional: Unique id of the user (if set, this should not change)
+  //type:       'Owner', // Optional: segment your users by type
+  //account: {
+  //  id:           123, // Optional: associate multiple users with a single account
+  //  name:         'Acme, Co.', // Account name
+  //  created_at:   1364406966, // Unix timestamp for the date the account was created
+  //  monthly_rate: 9.99, // Decimal; monthly rate of the account
+  //  ltv:          1495.00, // Decimal; lifetime value of the account
+  //  plan:         'Enhanced' // Plan name for the account
+  //}
+}]);
+
+// Add default trigger to the bottom-right corner of the window:
+UserVoice.push(['addTrigger', { mode: 'contact', trigger_position: 'bottom-right' }]);
+
+// Or, use your own custom trigger:
+//UserVoice.push(['addTrigger', '#id', { mode: 'contact' }]);
+
+// Autoprompt for Satisfaction and SmartVote (only displayed under certain conditions)
+UserVoice.push(['autoprompt', {}]);
+</script>
+
 
 <!-- Google Analytics Block -->
 <!-- end Google Analytics -->
