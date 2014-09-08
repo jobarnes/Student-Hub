@@ -1165,6 +1165,9 @@ a.news-item:hover {
 .block-box.news p {
     margin-bottom: 0;
 }
+.news-backdrop .media-box {
+    padding: 0 15px;
+}
 .content .block-box:hover {
     background-color: #DAE6EA;
 }
@@ -1233,7 +1236,7 @@ a.news-item:hover {
     padding-left: 0;
     margin-left: 0;
 }
-.box:hover h2, .box:hover p, .box:hover li, .box:hover a {
+.home .box:hover h2, .home .box:hover p, .home .box:hover li, .home .box:hover a, .box li a:hover {
     color: #fff;
 }
 .content .box a:hover {
@@ -1243,7 +1246,7 @@ a.news-item:hover {
 .explore .box {
     border-bottom: 14px solid #1C97A7;
 }
-#explore-box:hover, .explore .index-backdrop .box:hover, .explore .box:focus {
+#explore-box:hover, .explore .index-backdrop .box li a:hover {
     background-color: #18818F; /* #1C97A7; */
 }
 .explore h1, .explore h2, .explore .date {
@@ -1252,13 +1255,13 @@ a.news-item:hover {
 .admin .box {
     border-bottom: 14px solid #115B7E;
 }
-#admin-box:hover, .admin .index-backdrop .box:hover, .admin .box:focus {
+#admin-box:hover, .admin .index-backdrop .box li a:hover {
     background-color: #115B7E;
 }
 .achieve .box {
     border-bottom: 14px solid #D14F4F;
 }
-#achieve-box:hover, .achieve .index-backdrop .box:hover, .achieve .box:focus {
+#achieve-box:hover, .achieve .index-backdrop .box li a:hover {
     background-color: #BE4244;
 }
 .achieve h1, .achieve h2, .achieve .date {
@@ -1270,7 +1273,7 @@ a.news-item:hover {
 .get-involved .box {
     border-bottom: 14px solid #6E4E89;
 }
-.involved .box:hover, .involved .index-backdrop .box:hover, .involved .box:focus {
+.involved .box:hover, .involved .index-backdrop .box li a:hover {
     background-color: #80619A;
 }
 .involved h1, .involved h2, .involved .date {
@@ -1279,7 +1282,7 @@ a.news-item:hover {
 .balance .box {
     border-bottom: 14px solid #6E9844;
 }
-#balance-box:hover, .balance .index-backdrop .box:hover, .balance .box:focus {
+#balance-box:hover, .balance .index-backdrop .box li a:hover {
     background-color: #5D803A; /* #6E9844; */
 }
 .balance h1, .balance h2, .balance .date {
@@ -1288,7 +1291,7 @@ a.news-item:hover {
 .future .box {
     border-bottom: 14px solid #D1AC5C;
 }
-#future-box:hover, .future .index-backdrop .box:hover, .future .box:focus {
+#future-box:hover, .future .index-backdrop .box li a:hover {
     background-color: #996D3A; /* #D1AC5C; */
 }
 .future .block-box {
@@ -1306,7 +1309,7 @@ a.news-item:hover {
 .index-backdrop .row, .grad-block .row {
     margin:  0 -30px;
 } 
- .box-wrap {
+.box-wrap {
     margin-left: -30px;
     margin-right: -30px;
 }
@@ -1315,7 +1318,13 @@ a.news-item:hover {
     padding:  0 15px;
 }
 
-
+/* @group index page box hovers */
+.landing .index-backdrop .box li a:hover {
+    display: block;
+    width: 100%;
+    padding: 0 15px;
+}
+/* @end */
 /* @end */
 
 
@@ -1767,7 +1776,7 @@ a.site-title.blue {
     margin-left: 0;
 }
 .home .box {
-    min-height: 410px;
+    min-height: 500px;
 }
 .content .box {
     min-height: 370px;
