@@ -1621,6 +1621,11 @@ ul#main-nav li {
 .video-frame {
     height:250px;
 }
+.logo-small {
+    top: 20px;
+    left: 20px;
+}
+
 /* .page-header.block {
     height:  230px;
 } */
@@ -1923,6 +1928,9 @@ ul#main-nav li {
     border: none;
     padding-bottom: 20px;
 }
+.home .box {
+    min-height: 500px;
+}
 #main-nav a {
     padding: 16px;
 }
@@ -1988,6 +1996,9 @@ ul#main-nav {
 }
 a.site-title {
     font-size: 70px;
+}
+.home .box {
+    min-height: 410px;
 }
 }
 
