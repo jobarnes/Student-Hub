@@ -372,18 +372,17 @@ header {
     background: -ms-linear-gradient(top,  #6496b7 0%,#e5edf0 98%); /* IE10+ */
     background: linear-gradient(to bottom,  #6496b7 0%,#e5edf0 98%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6496b7', endColorstr='#e5edf0',GradientType=0 ); /* IE6-9 */
+    padding-bottom: 0;
 }
 .page-header.block {
     border-bottom: 0;
-    height: 280px;
     margin: 0;
     overflow: hidden;
     position: relative;
 }
-/* header .feat-img {
-    width: auto;
-    min-height: 300px;
-} */
+.page-header .feat-img, .page-header .feat-img img {
+    width: 100%;
+} 
 .page-header.block .branding {
     height: 200px;
     position: absolute;
@@ -1594,10 +1593,9 @@ a.to-top {
 .page-header.block {
     background-color: #036;
     font-size: 1em;
-    height: 300px;
 }
 a.site-title {
-    font-size: 30px;
+    font-size: 50px;
 }
 .page-header.block .branding {
     bottom: 20px;
@@ -1610,19 +1608,31 @@ a.site-title {
 #g-header {
     display: none;
 }
-/* @group Feedback tab */ /* ==================================================== Feedback tab */
 #uvTab {
     display: none;
 }
-/* @end */
+a.site-title {
+    font-size: 50px;
+    top:  100px;
+}
+.visible-xxs {
+	background-color: #002552;
+	text-align: center;
+}
+.visible-xxs img {
+	max-width: 300px;
+}
+.logo-small {
+	display: none !important;
+}
 }
 @media screen and (min-width: 480px){
+.visible-xxs {
+	display: none;
+}
 nav.container {
     padding: 0px 15px;
 } 
-.page-header.block {
-    height: 400px;
-}
 ul#main-nav li {
     width: 50%;
     text-align: left;
@@ -1639,10 +1649,6 @@ ul#main-nav li {
     top: 20px;
     left: 20px;
 }
-
-/* .page-header.block {
-    height:  230px;
-} */
 }
 
 @media screen and (max-width: 767px) {
@@ -1672,10 +1678,7 @@ ul#main-nav.menu-list{display:none;}
 .content-inner main {
     padding: 0;
 }
-.page-header.block {
-    height:  370px;
-}
-main .list-2-col li {
+.main .list-2-col li {
     width: 45%;
     margin-right: 5%;
     float: left;
@@ -1893,9 +1896,6 @@ body .news-summary .jumbotron, .video-frame iframe {
 .home .loginorout {
     right: -15px;
 }
-.page-header.block {
-    height:  400px;
-}
 main .block.page-title {
     padding: 40px 0 0 0;
 }
@@ -1966,13 +1966,13 @@ nav.container {
 /* .local-quicklinks i.fa {
     font-size: 3em;
 } */
-.page-header.block {
+/* .page-header.block {
     height:  500px;
 }
 .page-header.block img {
     min-height:  500px;
     width: 100%;
-}
+} */
 .box-frame {
     float: left;
     width:  33.33%;
@@ -2016,11 +2016,11 @@ a.site-title {
 }
 }
 
-@media screen and (min-width: 1800px) {
+/* @media screen and (min-width: 1800px) {
 .page-header.block img {
     min-height:  700px;
 }
-}
+} */
 
 @media 
 (-webkit-min-device-pixel-ratio: 2), 
