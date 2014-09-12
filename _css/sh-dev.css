@@ -1231,6 +1231,9 @@ a.news-item:hover {
     margin-top: 20px;
     text-align: center;
 }
+.box li br {
+    display: none;
+}
 .box ul, main .box ul li {
     padding-left: 0;
     margin-left: 0;
@@ -1595,7 +1598,7 @@ a.to-top {
     font-size: 1em;
 }
 a.site-title {
-    font-size: 50px;
+    font-size: 30px;
 }
 .page-header.block .branding {
     bottom: 20px;
@@ -1615,20 +1618,10 @@ a.site-title {
     font-size: 50px;
     top:  100px;
 }
-.visible-xxs {
-	background-color: #002552;
-	text-align: center;
-}
-.visible-xxs img {
-	max-width: 300px;
-}
-.logo-small {
-	display: none !important;
-}
 }
 @media screen and (min-width: 480px){
 .visible-xxs {
-	display: none;
+    display: none;
 }
 nav.container {
     padding: 0px 15px;
