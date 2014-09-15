@@ -366,6 +366,20 @@ img.alignleft {
 header {
 /*  padding-top: 20px; */
 }
+<<<<<<< HEAD
+=======
+.page-header {
+    background: #6496b7; /* Old browsers */
+    background: -moz-linear-gradient(top,  #6496b7 0%, #e5edf0 98%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6496b7), color-stop(98%,#e5edf0)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #6496b7 0%,#e5edf0 98%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #6496b7 0%,#e5edf0 98%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #6496b7 0%,#e5edf0 98%); /* IE10+ */
+    background: linear-gradient(to bottom,  #6496b7 0%,#e5edf0 98%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6496b7', endColorstr='#e5edf0',GradientType=0 ); /* IE6-9 */
+    padding-bottom: 0;
+}
+>>>>>>> FETCH_HEAD
 .page-header.block {
     background-color: #000;
     border-bottom: 0;
@@ -377,10 +391,9 @@ header {
 .feat-img {
     width: 100% !important;
 }
-/* header .feat-img {
-    width: auto;
-    min-height: 300px;
-} */
+.page-header .feat-img, .page-header .feat-img img {
+    width: 100%;
+} 
 .page-header.block .branding {
     position: absolute;
     text-align: center;
@@ -1204,6 +1217,9 @@ a.news-item:hover {
     margin-top: 20px;
     text-align: center;
 }
+.box li br {
+    display: none;
+}
 .box ul, main .box ul li {
     padding-left: 0;
     margin-left: 0;
@@ -1607,7 +1623,6 @@ a.to-top {
 .page-header.block {
     background-color: #036;
     font-size: 1em;
-    height: 300px;
 }
 a.site-title {
     font-size: 30px;
@@ -1623,13 +1638,18 @@ a.site-title {
 #g-header {
     display: none;
 }
-/* @group Feedback tab */ /* ==================================================== Feedback tab */
 #uvTab {
     display: none;
 }
-/* @end */
+a.site-title {
+    font-size: 50px;
+    top:  100px;
+}
 }
 @media screen and (min-width: 480px){
+.visible-xxs {
+    display: none;
+}
 nav.container {
     padding: 0px 15px;
 } 
@@ -1663,10 +1683,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00353736', e
     top: 20px;
     left: 20px;
 }
-
-/* .page-header.block {
-    height:  230px;
-} */
 }
 
 @media screen and (max-width: 767px) {
@@ -1699,10 +1715,7 @@ html, body {
 .content-inner main {
     padding: 0;
 }
-.page-header.block {
-    height:  370px;
-}
-main .list-2-col li {
+.main .list-2-col li {
     width: 45%;
     margin-right: 5%;
     float: left;
@@ -1920,9 +1933,6 @@ body .news-summary .jumbotron, .video-frame iframe {
 .home .loginorout {
     right: -15px;
 }
-.page-header.block {
-    height:  400px;
-}
 main .block.page-title {
     padding: 40px 0 0 0;
 }
@@ -1993,13 +2003,13 @@ nav.container {
 /* .local-quicklinks i.fa {
     font-size: 3em;
 } */
-.page-header.block {
+/* .page-header.block {
     height:  500px;
 }
 .page-header.block img {
     min-height:  500px;
     width: 100%;
-}
+} */
 .box-frame {
     float: left;
     width:  33.33%;
@@ -2043,11 +2053,11 @@ a.site-title {
 }
 }
 
-@media screen and (min-width: 1800px) {
+/* @media screen and (min-width: 1800px) {
 .page-header.block img {
     min-height:  700px;
 }
-}
+} */
 
 @media 
 (-webkit-min-device-pixel-ratio: 2), 
