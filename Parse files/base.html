@@ -151,7 +151,7 @@
        <source srcset="%globals_asset_metadata_students.feature-img-md_asset_url%" media="(min-width: 1000px)">
         <source srcset="%globals_asset_metadata_students.feature-img-sm_asset_url%" media="(min-width: 481px)"> 
         <source srcset="%globals_asset_metadata_students.feature-img-xs_asset_url%" media="(max-width: 480px)"> 
-        <img srcset="%globals_asset_metadata_students.feature-img-xs_asset_url%" alt="%globals_asset_metadata_students.feature-img-xs_asset_friendly_name%">
+        <img class="feat-img" srcset="%globals_asset_metadata_students.feature-img-sm_asset_url%" alt="%globals_asset_metadata_students.feature-img-xs_asset_friendly_name%">
     </picture> 
     
 <div class="hero-overlay"></div>
@@ -306,13 +306,12 @@
 <script>
 UserVoice = window.UserVoice || [];
 UserVoice.push(['showTab', 'classic_widget', {
-  mode: 'full',
-  primary_color: '#cc6d00',
-  link_color: '#007dbf',
-  default_mode: 'support',
+  mode: 'feedback',
+  primary_color: '#2d5275',
+  link_color: '#2d5275',
   forum_id: 263320,
-  tab_label: 'Feedback & Support',
-  tab_color: '#224a70',
+  tab_label: 'Give feedback',
+  tab_color: '#2d5275',
   tab_position: 'middle-right',
   tab_inverted: false
 }]);
