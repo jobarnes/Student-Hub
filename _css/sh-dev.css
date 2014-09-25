@@ -488,7 +488,7 @@ footer.local .label {
     font-weight: 400;
     font-size: 1em;
     padding: 0 0 5px 0;
-    display: inline-block;
+    display: block;
     text-align: left;
     width:  8em;
 }
@@ -525,13 +525,12 @@ footer .fa-phone {
 }
 footer .block {
     text-align: left;
-    margin-bottom: 10px;
+    margin-bottom: 18px;
     display: block;
     overflow: auto;
 }
 .block-wrap {
     width:  100%;
-    margin-bottom:  25px;
 }
 #footernav {
     position: relative;
@@ -1146,6 +1145,9 @@ form div.sq-backend-smallprint {
     margin: 5px 0;
     padding: 0;
 }
+.landing .block-box h2 {
+    padding-bottom: 10px;
+}
 a.news-item:hover {
     background-color: #CEDEE5;
 }
@@ -1248,7 +1250,8 @@ a.news-item:hover {
     display: none;
 }
 .box p {
-    line-height: 1.8em;
+    line-height: 2em;
+    padding-top: 5px;
 }
 .box a {
     border-bottom: none;
@@ -1347,13 +1350,10 @@ a.news-item:hover {
     color: #417011;
     box-shadow: none;
 }
-.balance .contrast:hover {
-    background-color: #5C8930;
-}
 .future .box {
     border-bottom: 14px solid #D1AC5C;
 }
-#future-box:hover, .future .index-backdrop .box li a:hover {
+#future-box:hover, .future .index-backdrop .box li a:hover, .future .news-backdrop .contrast {
     background-color: #996D3A; /* #D1AC5C; */
 }
 .future .block-box {
@@ -1539,13 +1539,60 @@ a.more .fa {
 
 /* @group Social media */ 
 .social-backdrop .container {
-    padding-left: 0px;
-    padding-right: 0px;
+    padding: 30px 0;
+}
+.social-backdrop h2 {
+    padding: 0 20px 10px 20px;
 }
 .social-backdrop ul {
     padding-left: 0;
-    margin: 0 -15px;
+    margin: 0 10px;
 }
+.instagram.status {
+    float: left;
+    overflow: hidden;
+    padding-bottom: 50%;
+    position: relative;
+    width: 50%;
+}
+.instagram figure {
+    left: 10px;
+    right: 10px;
+    top: 10px;
+    bottom: 10px;
+    position: absolute;
+}
+.instagram.status figure img.photo {
+    width: 100%;
+}
+.status-list .button, .status-list select, .status-list .check-toggle,
+.status-list .profile-manager .avatar-pullout:after, .profile-manager .status-list .avatar-pullout:after {
+    display: block
+}
+.status.instagram .author {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    background: rgba(229, 239, 246, 0.8)
+}
+.status .author img {
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=90);
+    opacity: 0.9;
+    width: 30px;
+    max-height: 30px;
+    margin-right: 4px;
+    vertical-align: middle
+}
+.status.instagram figure.status-content figcaption {
+    display: none
+}
+
+/*
 .quarter {
     float: left;
     width: 22%;
@@ -1555,10 +1602,7 @@ a.more .fa {
     overflow: hidden;
     padding-bottom: 60px
 }
-.status-list .button, .status-list select, .status-list .check-toggle,
-.status-list .profile-manager .avatar-pullout:after, .profile-manager .status-list .avatar-pullout:after {
-    display: block
-}
+
 .status {
     position: relative;
     margin-bottom: 30px;
@@ -1625,20 +1669,8 @@ a.more .fa {
     min-height: 50%;
     max-width: 50%
 }
-.status.instagram figure.status-content figcaption {
-    display: none
-}
-.status.instagram .author {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 5px;
-    background: rgba(229, 239, 246, 0.8)
-}
+
+*/
 /* @end */
 
 /* @group A-Z list */
@@ -1857,6 +1889,20 @@ ul#main-nav.menu-list{display:none;}
 }
 a.site-title {
     top:  0;
+}
+.instagram.status {
+    padding-bottom: 25%;
+    width: 25%;
+}
+.social-backdrop .container {
+    padding: 0;
+}
+.social-backdrop ul {
+    padding-left: 0;
+    margin: 0 -10px;
+}
+.social-backdrop h2 {
+    padding-left: 0;
 }
 }
 
@@ -2173,7 +2219,7 @@ a.site-title {
     font-size: 70px;
 }
 .home .box {
-    min-height: 410px;
+    min-height: 400px;
 }
 }
 
