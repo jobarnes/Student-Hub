@@ -21,11 +21,11 @@ body {
 }
 /* @group Selected text */ /* ====================================================== Selected text */
 ::selection {
-    background: #2D6098; /* Firefox */
+    background: #2D6098; 
     color: #fff;
 }
 ::-moz-selection {
-    background: #2D6098; /* Firefox */
+    background: #2D6098; 
     color: #fff;
 }
 /* @end */
@@ -1149,7 +1149,7 @@ form div.sq-backend-smallprint {
     padding-bottom: 10px;
 }
 a.news-item:hover {
-    background-color: #CEDEE5;
+    background-color: #E3ECEF;
 }
 .block-box.news, .block-box.events {
     margin: 20px;
@@ -1432,6 +1432,7 @@ a.news-item:hover {
 .more-news {
     text-align: left;
 }
+
 /* @end */
 
 
@@ -1971,6 +1972,9 @@ a.site-title.blue {
 .box-wrap.l500 .box {
     min-height: 500px;
 }
+.box-wrap.l510 .box {
+    min-height: 510px;
+}
 .block-wrap {
     float:  left;
     width:  50%;
@@ -2223,12 +2227,16 @@ a.site-title {
 }
 }
 
-/* @media screen and (min-width: 1800px) {
-.involved .feat-img {
+@media screen and (min-width: 1800px) {
+/* .involved .feat-img {
     position: relative;
     top: -100px;
-}
 } */
+
+.page-header.block {
+    max-height: 500px;
+}
+}
 
 @media 
 (-webkit-min-device-pixel-ratio: 2), 
@@ -2243,5 +2251,7 @@ a.site-title {
 .site-title {
       padding: 0; margin: 0;
 }
+
+
 
 /* @end */
