@@ -69,11 +69,6 @@ main .content {
     main a, footer a {
         color: #485A79;
 }
-    .content a:hover {
-        background-color: #036;
-        color: #fff;
-        text-decoration: none;
-    }
     main p, main ul, main ol, main td, tbody th {
         line-height: 1.6em;
         color: #666;
@@ -84,6 +79,10 @@ main .content {
 }
 .main a {
     border-bottom: 1px dotted #767676;
+}
+.content a:hover {
+    text-decoration: none;
+    border-bottom: 1px dotted #8EDAAC;
 }
 /* @end */
 
@@ -415,6 +414,7 @@ ul.menu-list>li>ul{border: none; border-left: 1px solid #ccc;}
 ul.menu-list>li>ul>li{}
 ul.menu-list>li>ul>li>a{}
 ul.menu-list>li>ul>li:hover{}
+ul.menu-list>li>ul>li:last-child{border-bottom: 1px solid #ccc;}
 ul.menu-list>li>ul>li:hover>a{}
 ul.menu-list>li>ul>li>a:hover{}
 /* End Second Level*/
@@ -634,7 +634,7 @@ abbr[title], abbr[data-original-title] {
 /* @end */
 
 
-/* @group Extra space */ /* ======================================================= Extra space */
+/* @group Extra / no space */ /* ======================================================= Extra space */
 
 .more-space-left {
     padding-left: 25px;
@@ -663,7 +663,22 @@ abbr[title], abbr[data-original-title] {
 .highlight {
     background-color: #fff9aa;
 }
-
+.no-space-top {
+    padding-top: 0;
+    margin-top: 0;
+}
+.no-space-bottom {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.no-space-left {
+    padding-left: 0;
+    margin-left: 0;
+}
+.no-space-right {
+    padding-right: 0;
+    margin-right: 0;
+} 
 /* @end */
 
 
@@ -794,8 +809,7 @@ main #buttons a.btn-default {
     padding-left: 0;
 }
 .link-block a {
-    border-bottom: medium none;
-    display: block;
+    border-bottom: none;
 }
 .main .link-block li {
     background: none repeat scroll 0 0 transparent;
@@ -814,20 +828,26 @@ main #buttons a.btn-default {
     padding-left: 12px;
 }
 .link-block > ul > li > a {
-    color: #CE460C;
+    color: #558E67;
     font-size: 1.4em;
     padding-bottom: 1em;
     display: block;
     font-weight: 200;
+}
+.link-block > ul > li > a:nth-child(1n) {
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid #fff;
 }
 .link-block > ul > li > a:nth-child(1n):hover {
     padding: 0;
     background-color: none;
 }
 .link-block > ul > li > a:nth-child(2n):hover {
-    color: #fff;
-    margin: 0;
-    padding: 0 0 1em 0;
+    border-bottom: 1px dotted #8EDAAC;
+    text-decoration: none;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
 }
 .link-block > ul > li:nth-child(3n+1) {
     clear: right;

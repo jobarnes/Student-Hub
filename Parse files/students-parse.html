@@ -17,7 +17,7 @@
             </head>
             <body></body>
         </html>        
-        <MySource_PRINT id_name="exit_area" />        
+        <MySource_PRINT id_name="exit_area" />
     </MySource_THEN>
 </MySource_AREA>
 <!-- / EASY EDIT -->
@@ -34,9 +34,9 @@
   Asset ID: %globals_asset_assetid%
 -->
     <MySource_AREA id_name="metadata" design_area="metadata"/>
-    
+
 <!-- GLOBAL RESOURCES -->
-	<link href="http://brand.unimelb.edu.au/global-header/css/style.css" rel="stylesheet" >
+<link href="http://brand.unimelb.edu.au/global-header/css/style.css" rel="stylesheet" >
 <!-- /GLOBAL RESOURCES -->
    
     <MySource_AREA id_name="head" design_area="head" />
@@ -54,7 +54,7 @@
     
 <!-- HTML5 shiv / respond.js - for IE -->
 <MySource_AREA id_name="shiv_respond" design_area="nest_content" cache="1">
-	<MySource_SET name="type_codes" value="page" />
+    <MySource_SET name="type_codes" value="page" />
 </MySource_AREA>
 
 <!--[if IE]>
@@ -82,12 +82,12 @@
     <MySource_DECLARE name="body_class" value="no-logo blue" type="text" description="Classes that are added to the body tag."/>
 </MySource_AREA>
 
-<MySource_AREA id_name="content_vars" design_area="declared_vars" print="no">
-    <MySource_DECLARE name="content_class" value="col-md-12" type="text" description="Classes that are added to the content block."/>
-</MySource_AREA>
+<!-- <MySource_AREA id_name="content_vars" design_area="declared_vars" print="no">
+    <MySource_DECLARE name="content_class" value="col-md-12" type="text" print="no" description="Classes that are added to the content block."/>
+</MySource_AREA> -->
 </head>
 
-<body class="<MySource_PRINT id_name='template_vars' var='body_class' /> %globals_asset_assetid%">
+<body class="<MySource_PRINT id_name='template_vars' var='body_class' /> %globals_asset_metadata_students.page-type% %globals_asset_metadata_students.section% a-%globals_asset_assetid%">
 
 <!-- Google Tag Manager --> 
     <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-7JB9" 
@@ -99,84 +99,90 @@
     })(window,document,'script','dataLayer','GTM-7JB9');</script> 
 <!-- End Google Tag Manager --> 
 
+<div class="hidden-xs">
 <!-- Global header -->
 <div id="g-header" role="banner">
-	<div class="wrapper container">
-		<ul class="skiplinks">
-			<li><a href="#g-global-menu">Skip to navigation</a></li>
-			<li><a href="#main-content">Skip to content</a></li>
-		</ul>
-		<ol id="g-breadcrumb-menu">
-			<li id="g-breadcrumb-home"><a href="//www.unimelb.edu.au/">University Home</a></li>
-		</ol>
-		<div id="g-global-search"> <a href="http://search.unimelb.edu.au/" id="g-search-button" role="button" aria-haspopup="true">Search</a>
-			<ul id="g-audience-links">
-				<li><a href="http://campaign.unimelb.edu.au" class="mobile-hide">Support the Campaign</a></li>
-				<li><a href="http://students.unimelb.edu.au/">Current Students</a></li>
-				<li><a href="http://www.unimelb.edu.au/staff/">Staff</a></li>
-				<li><a href="http://alumni.unimelb.edu.au/" class="mobile-hide">Alumni</a></li>
-				<li><a href="http://library.unimelb.edu.au/">Library</a></li>
-				<li><a href="http://www.unimelb.edu.au/contact/">Contact &amp; Maps</a></li>
-			</ul>
-			<div id="g-global-search-overlay">
-				<form method="get" action="http://search.unimelb.edu.au/" name="g-searchform" id="g-searchform" role="search">
-					<label for="q"><span>Search the university</span></label>
-					<input accesskey="s" name="q" id="q" value="" title="Search the University" type="search">
-					<input name="sa" id="g-global-search-submit" value="Search" type="submit">
-				</form>
-			</div>
-		</div>
-		<hr>
-		<ol id="g-global-menu" role="navigation" aria-labelledby="g-global-menu-label">
-			<a id="g-global-menu-logo" href="http://www.unimelb.edu.au">The University of Melbourne</a>
-			<li id="g-global-menu-label">Browse the University</li>
-			<li><a href="//coursesearch.unimelb.edu.au" id="g-global-menu-study">Study</a></li>
-			<li><a href="http://unimelb.edu.au/research/" id="g-global-menu-research">Research</a></li>
-			<li><a href="http://unimelb.edu.au/engage/" id="g-global-menu-community">Engage</a></li>
-			<li><a href="http://about.unimelb.edu.au/" id="g-global-menu-about-us" class="last">About Us</a></li>
-		</ol>
-		<hr class="g-clear-floats">
-	</div>
+    <div class="wrapper container">
+        <ul class="skiplinks">
+            <li><a href="#g-global-menu">Skip to navigation</a></li>
+            <li><a href="#main-content">Skip to content</a></li>
+        </ul>
+        <ol id="g-breadcrumb-menu">
+            <li id="g-breadcrumb-home"><a href="//www.unimelb.edu.au/">University Home</a></li>
+        </ol>
+        <div id="g-global-search"> <a href="http://search.unimelb.edu.au/" id="g-search-button" role="button" aria-haspopup="true">Search</a>
+            <ul id="g-audience-links">
+                <li><a href="http://campaign.unimelb.edu.au" class="mobile-hide">Support the Campaign</a></li>
+                <li><a href="http://students.unimelb.edu.au/">Current Students</a></li>
+                <li><a href="http://www.unimelb.edu.au/staff/">Staff</a></li>
+                <li><a href="http://alumni.unimelb.edu.au/" class="mobile-hide">Alumni</a></li>
+                <li><a href="http://library.unimelb.edu.au/">Library</a></li>
+                <li><a href="http://www.unimelb.edu.au/contact/">Contact &amp; Maps</a></li>
+            </ul>
+            <div id="g-global-search-overlay">
+                <form method="get" action="http://search.unimelb.edu.au/" name="g-searchform" id="g-searchform" role="search">
+                    <label for="q"><span>Search the university</span></label>
+                    <input accesskey="s" name="q" id="q" value="" title="Search the University" type="search">
+                    <input name="sa" id="g-global-search-submit" value="Search" type="submit">
+                </form>
+            </div>
+        </div>
+        <hr>
+        <ol id="g-global-menu" role="navigation" aria-labelledby="g-global-menu-label">
+            <a id="g-global-menu-logo" href="http://www.unimelb.edu.au">The University of Melbourne</a>
+            <li id="g-global-menu-label">Browse the University</li>
+            <li><a href="//coursesearch.unimelb.edu.au" id="g-global-menu-study">Study</a></li>
+            <li><a href="http://unimelb.edu.au/research/" id="g-global-menu-research">Research</a></li>
+            <li><a href="http://unimelb.edu.au/engage/" id="g-global-menu-community">Engage</a></li>
+            <li><a href="http://about.unimelb.edu.au/" id="g-global-menu-about-us" class="last">About Us</a></li>
+        </ol>
+        <hr class="g-clear-floats">
+    </div>
 </div>
-<div id="g-header-blue-block"></div>
 <span class="g-clear-floats"></span>
+</div>
 <!-- / Global header -->
 
 
 <header class="page-header block" role="banner">
 
-	<picture class="feat-img">
-		<source srcset="%globals_asset_metadata_students.feature-img-lg_asset_url%" media="(min-width: 1200px)">
-		<source srcset="%globals_asset_metadata_students.feature-img-md_asset_url%" media="(min-width: 1000px)">
-		<source srcset="%globals_asset_metadata_students.feature-img-sm_asset_url%" media="(min-width: 481px)">
-		<source srcset="%globals_asset_metadata_students.feature-img-xs_asset_url%">
-		<img srcset="%globals_asset_metadata_students.feature-img-md_asset_url%" alt="%globals_asset_metadata_students.feature-img-md_asset_friendly_name%" class="img-responsive">
-	</picture> 
-	
-	
-	<div class="branding container">
-	     <MySource_AREA id_name="branding_space" design_area="nest_content" cache="1">
-	     	<MySource_SET name="type_codes" value="page" />
-	     </MySource_AREA>
-	</div><!-- /branding -->  
+    <picture class="feat-img">
+        <source srcset="%globals_asset_metadata_students.feature-img-lg_asset_url%" media="(min-width: 1200px)">
+        <source srcset="%globals_asset_metadata_students.feature-img-md_asset_url%" media="(min-width: 768px)">
+        <source srcset="%globals_asset_metadata_students.feature-img-sm_asset_url%" media="(min-width: 321px)"> 
+        <source srcset="%globals_asset_metadata_students.feature-img-xs_asset_url%" media="(max-width: 320px)"> 
+        <img class="feat-img" srcset="%globals_asset_metadata_students.feature-img-md_asset_url%" alt="%globals_asset_metadata_students.feature-img-md_asset_friendly_name%">
+    </picture> 
+    
+<div class="hero-overlay"></div>
+
+    <a href="//www.unimelb.edu.au/"><img class="visible-xs logo-small" src="//d205bjjfnaycdb.cloudfront.net/uom-v.jpg" alt="The University of Melbourne (logo)"></a>
+    
+    <div class="branding container">
+         <MySource_AREA id_name="branding_space" design_area="nest_content" cache="1">
+             <MySource_SET name="type_codes" value="page" />
+         </MySource_AREA>
+    </div><!-- /branding -->  
 </header>
     
-<div class="backdrop nav-backdrop">
+<div class="block nav-backdrop">
         <nav class="container" role="navigation">
         <MySource_AREA id_name="main_nav" design_area="nest_content" cache="1">
-        	<MySource_SET name="type_codes" value="page" />
+            <MySource_SET name="type_codes" value="page" />
         </MySource_AREA>
-    </nav>
+        </nav>
 </div>
 <!-- /backdrop -->
 
 <main id="main-content" class="main backdrop" role="main">
 
 <!-- pre-breadcrumb content -->
-<MySource_AREA id_name="before_breadcrumbs" design_area="nest_content" cache="1">
-	<MySource_SET name="type_codes" value="page" />
+<MySource_AREA id_name="before_breadcrumbs" design_area="nest_content" print="no" cache="1">
+           <MySource_SET name="type_codes" value="page" />
 </MySource_AREA>
 <!-- /pre-breadcrumb content -->
+
+%globals_asset_metadata_students.section-news^as_asset:asset_contents%
 
 <div class="backdrop bc-backdrop">
 <MySource_AREA id_name="page_lineage" design_area="asset_lineage">
@@ -198,88 +204,119 @@
 </MySource_AREA>
 </div><!-- /breadcrumb-backdrop -->
 
-<div class="backdrop first-block">
-    <div class="container outer buttleft">
-    <div class="row content">
-    <div class="<MySource_PRINT id_name='content_vars' var='content_class' print='yes' />">
-        <MySource_AREA id_name="auto_heading" design_area="asset_lineage"><h1><MySource_PRINT id_name="__global__" var="asset_name" /></h1></MySource_AREA>
+
+<!-- inner content starting block -->
+<MySource_AREA id_name="content_start" design_area="nest_content" cache="1">
+    <MySource_SET name="type_codes" value="page" />
+</MySource_AREA>
+<!-- /inner content start -->
+
+
+    <div class="page-content">
+        <MySource_AREA id_name="auto_heading" design_area="asset_lineage"><div class="backdrop page-title"><div class="container"><div class="row"><h1><MySource_PRINT id_name="__global__" var="asset_name" /><span class="sr-only"> - Section contents</span></h1></div></div></div></MySource_AREA>
         <MySource_AREA id_name="body" design_area="body" />
     </div><!-- / var content_class -->
-    </div><!-- /row -->
-    </div><!-- /container -->    
-</div><!-- / backdrop -->   
+
+
+<!-- inner content end -->
+<MySource_AREA id_name="content_end" design_area="nest_content" cache="1">
+    <MySource_SET name="type_codes" value="page" />
+</MySource_AREA>
+<!-- /inner content end -->
 </main>
 
-
 <footer class="backdrop local" role="contentinfo">
+
+
    <div class="container">
    <div class="row">
-   <div class="footer-content col-sm-4">
+   <div class="footer-content col-sm-8">
    <MySource_AREA id_name="footer_content" design_area="nest_content" cache="1"><MySource_SET name="type_codes" value="page" /></MySource_AREA>
    </div>
   
-   <div class="meta col-sm-8">
-   <dl class="auth-meta">
-   <span class="col-sm-3">
-       <dt>Maintainer</dt>   
-       <dd class="cf"><a class="email" href="mailto:%asset_metadata_UM.Maintainer.Email%">%asset_metadata_UM.Maintainer.Name% <i class="fa fa-envelope-o"></i></a></dd>
-   </span>
-   <span class="col-sm-3">  
-       <dt>Authoriser</dt>
-       <dd class="cf">%asset_metadata_UM.Authoriser.Title%</dd>
-   </span>
-   </dl>
-
-   
-   <dl class="page-meta">
-   <span class="col-sm-3"> 
-       <dt>Date created</dt>
-       <dd>%asset_created_j% %asset_created_F% %asset_created_Y%</dd>
-   </span> 
-   <span class="col-sm-3"> 
-       <dt>Last modified</dt>
-       <dd>%asset_updated_j% %asset_updated_F% %asset_updated_Y%</dd>
-   </span>
-   </dl>
+   <div class="meta col-sm-4">
+            <h2 class="section-title">About this page</h2>
+                <div class="auth-meta block-wrap">
+                    <div class="maint block clearfix">
+                        <span class="label">Maintainer</span>
+                        <span class="maintainer">
+                        <a class="email" href="mailto:%asset_metadata_UM.Maintainer.Email%">%asset_metadata_UM.Maintainer.Name% <i class="fa fa-envelope-o"></i></a>
+                        </span>
+                    </div>
+                    <div class="auth block clearfix">
+                        <span class="label">Authoriser</span>
+                        <span class="authoriser">%asset_metadata_UM.Authoriser.Title%</span>
+                    </div>
+                </div>
+                <div class="page-meta block-wrap">
+                    <div class="created block clearfix">
+                        <span class="label">Date created</span>
+                        <span class="date">%asset_created_j% %asset_created_F% %asset_created_Y%</span>
+                    </div>
+                    <div class="modified block clearfix">
+                        <span class="label">Last modified</span>
+                        <span class="date">%asset_updated_j% %asset_updated_F% %asset_updated_Y%</span>
+                    </div>
+                    </div>
+                </div>
    </div><!-- /meta -->
    </div><!-- /row -->
    </div><!-- / container -->
 </footer>
 
 <!-- global footer -->
-<div role="contentinfo" id="footernav">
-	<div class="wrapper container">
-		<p id="backtotop"><a href="#g-breadcrumb-menu">Back to top</a></p>
-		<a id="footernav-logo" href="http://unimelb.edu.au"><img alt="The University of Melbourne logo" src="http://brand.unimelb.edu.au/global-header/images/unimelb-logo-lge.png"></a>
-		<dl id="footernav-required">
-			<dt>Phone:</dt>
-			<dd>13 MELB (13 6352) | International: +(61 3) 9035 5511</dd>
-			<br>
-			<dt>The University of Melbourne ABN:</dt>
-			<dd>84 002 705 224</dd>
-			<br>
-			<dt>CRICOS Provider Code:</dt>
-			<dd>00116K <a href="http://www.services.unimelb.edu.au/international/visas/index.html">(visa information)</a></dd>
-			<br>
-			<dt><a href="http://brand.unimelb.edu.au/web/docs">Web brand guidelines</a> created by <a href="http://marcom.unimelb.edu.au">Marketing</a></dt>
-			<dd></dd>
-		</dl>
-		<ul id="footernav-social">
-			<li><a href="http://www.twitter.com/unimelb"><img alt="Connect with us on Twitter" src="http://brand.unimelb.edu.au/global-header/images/icon-twitter.png"></a></li>
-			<li><a href="http://www.facebook.com/melbuni"><img alt="Connect with us on Facebook" src="http://brand.unimelb.edu.au/global-header/images/icon-facebook.png"></a></li>
-			<li><a href="http://au.linkedin.com/pub/the-university-of-melbourne/61/430/215"><img alt="Connect with us on Facebook" src="http://brand.unimelb.edu.au/global-header/images/icon-linkedin.png"></a></li>
-		</ul>
-		<ul id="footernav-legals">
-			<li><a href="http://www.unimelb.edu.au/disclaimer/">Disclaimer &amp; copyright</a></li>
-			<li><a href="http://www.unimelb.edu.au/accessibility/index.html">Accessibility</a></li>
-			<li><a href="http://www.unimelb.edu.au/disclaimer/privacy.html">Privacy</a></li>
-		</ul>
-	</div>
-	<hr class="g-clear-floats">
+<div id="footernav">
+    <div class="wrapper container">
+        <p id="backtotop"><a href="#g-breadcrumb-menu">Back to top</a></p>
+        <a id="footernav-logo" href="http://unimelb.edu.au"><img alt="The University of Melbourne logo" src="http://brand.unimelb.edu.au/global-header/images/unimelb-logo-lge.png"></a>
+        <dl id="footernav-required">
+            <dt>Phone:</dt>
+            <dd>13 MELB (13 6352) | International: +(61 3) 9035 5511</dd>
+            <br>
+            <dt>The University of Melbourne ABN:</dt>
+            <dd>84 002 705 224</dd>
+            <br>
+            <dt>CRICOS Provider Code:</dt>
+            <dd>00116K <a href="http://www.services.unimelb.edu.au/international/visas/index.html">(visa information)</a></dd>
+            <br>
+            <dt><a href="http://brand.unimelb.edu.au/web/docs">Web brand guidelines</a> created by <a href="http://marcom.unimelb.edu.au">Marketing</a></dt>
+            <dd></dd>
+        </dl>
+        <ul id="footernav-social">
+            <li><a href="http://www.twitter.com/unimelb"><img alt="Connect with us on Twitter" src="http://brand.unimelb.edu.au/global-header/images/icon-twitter.png"></a></li>
+            <li><a href="http://www.facebook.com/melbuni"><img alt="Connect with us on Facebook" src="http://brand.unimelb.edu.au/global-header/images/icon-facebook.png"></a></li>
+            <li><a href="http://au.linkedin.com/pub/the-university-of-melbourne/61/430/215"><img alt="Connect with us on Facebook" src="http://brand.unimelb.edu.au/global-header/images/icon-linkedin.png"></a></li>
+        </ul>
+        <ul id="footernav-legals">
+            <li><a href="http://www.unimelb.edu.au/disclaimer/">Disclaimer &amp; copyright</a></li>
+            <li><a href="http://www.unimelb.edu.au/accessibility/index.html">Accessibility</a></li>
+            <li><a href="http://www.unimelb.edu.au/disclaimer/privacy.html">Privacy</a></li>
+        </ul>
+    </div>
+    <hr class="g-clear-floats">
 </div>
 <!-- /global footer -->
 
 <MySource_AREA id_name="foot_fw" design_area="nest_content" cache="1"><MySource_SET name="type_codes" value="page" /></MySource_AREA>
+
+<!-- UserVoice JavaScript SDK (only needed once on a page) -->
+<script>(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/amCH8L2nRbs2V5c4o3KV0A.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})()</script>
+
+<!-- A tab to launch the Classic Widget -->
+<script>
+UserVoice = window.UserVoice || [];
+UserVoice.push(['showTab', 'classic_widget', {
+  mode: 'feedback',
+  primary_color: '#2d5275',
+  link_color: '#2d5275',
+  forum_id: 263320,
+  tab_label: 'Give feedback',
+  tab_color: '#2d5275',
+  tab_position: 'middle-right',
+  tab_inverted: false
+}]);
+</script>
+
 <!-- Google Analytics Block -->
 <!-- end Google Analytics -->
 <!-- Google search block -->

@@ -961,7 +961,7 @@ main .media {
     width: 100%;
 }
 .link-block > ul > li > a {
-    color: #8C2300;
+    color: #8C2300 !important;
     font-size: 1.2em;
 }
 .link-block > ul > li:nth-child(3n+1) {
@@ -2231,11 +2231,10 @@ a.site-title {
 /* .involved .feat-img {
     position: relative;
     top: -100px;
-} */
-
+} 
 .page-header.block {
     max-height: 500px;
-}
+}*/
 }
 
 @media 
